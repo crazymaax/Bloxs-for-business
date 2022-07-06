@@ -8,7 +8,11 @@ const Aside = () => {
 
     return (
         <aside className="mainContent__aside">
-            <img src={bloxsLogo} alt="Logo da Bloxs" />
+
+            <figure className="aside__image">
+                <img src={bloxsLogo} alt="Logo da Bloxs" />
+                <figcaption>Logo da Bloxs</figcaption>
+            </figure>
 
             <nav className="aside__nav">
                 <a href="#">Home</a>
