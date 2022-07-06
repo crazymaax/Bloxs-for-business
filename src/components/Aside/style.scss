@@ -1,0 +1,96 @@
+@use "../../style/utilities";
+
+.mainContent__aside {
+    height: 100vh;
+    padding: 0px 15px;
+    background-color: utilities.$aside-background-color-1;
+    
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.aside__image {
+    
+    img {
+        width: 20rem;
+    }
+    
+    figcaption {
+        display: none;
+    }
+}
+
+.aside__nav {
+    height: 100%;
+    font-size: 1rem;
+    padding: 30px 22px 30px 22px;
+
+    > div {
+        margin-top: 30px;
+
+        span {
+            color: utilities.$aside-textcolor-2;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            margin-top: 15px;
+
+            a {
+                text-decoration: none;
+                color: utilities.$aside-textcolor-1;
+            }
+
+            details {
+                display: flex;
+            }
+            
+            details {
+                cursor: pointer;
+
+                summary {
+                    
+                    color: utilities.$aside-textcolor-1;
+                    list-style: none;
+                    &::-webkit-details-marker {
+                        display: none;
+                    }
+                }
+            
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    
+                    margin-top: 10px;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.aside__button {
+    padding: 10px 0px;
+    width: 100%;
+
+    background-color: utilities.$aside-secondary-color;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+
+    border: transparent;
+    border-radius: 8px;
+    
+    align-self: center;
+
+    margin-bottom: 20px;
+}
