@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Comunidade = () => {
 
     return (
@@ -24,7 +26,7 @@ const Comunidade = () => {
                     </details>
                 </li>
                 <li>
-                    <a href="#">Notícias</a>
+                    <Link to="/noticias">Notícias</Link>
                 </li>
                 <li>
                     <a href="#">Serviços</a>
