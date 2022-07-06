@@ -1,10 +1,12 @@
-import './App.css'
+import "./App.scss"
+
+import Routes from "./routes"
 
 function App() {
 
   return (
     <>
-      App
+      <Routes />
     </>
   )
 }
