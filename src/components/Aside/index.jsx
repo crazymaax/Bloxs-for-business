@@ -13,7 +13,9 @@ const Aside = () => {
                 <Empreendedor />
                 <Comunidade />
             </nav>
-            
+
+            <button>Submeter projeto</button>
+
         </aside>
     )
 }
