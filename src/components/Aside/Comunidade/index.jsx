@@ -16,9 +16,11 @@ const Comunidade = () => {
                         <summary>
                             Eventos
                         </summary>
-                        <a href="#">Evento 1</a>
-                        <a href="#">Evento 2</a>
-                        <a href="#">Evento 3</a>
+                        <div>
+                            <a href="#">Evento 1</a>
+                            <a href="#">Evento 2</a>
+                            <a href="#">Evento 3</a>
+                        </div>
                     </details>
                 </li>
                 <li>

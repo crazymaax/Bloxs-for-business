@@ -16,9 +16,11 @@ const Empreendedor = () => {
                         <summary>
                             Projetos
                         </summary>
-                        <a href="#">Projeto 1</a>
-                        <a href="#">Projeto 2</a>
-                        <a href="#">Projeto 3</a>
+                        <div>
+                            <a href="#">Projeto 1</a>
+                            <a href="#">Projeto 2</a>
+                            <a href="#">Projeto 3</a>
+                        </div>
                     </details>
                 </li>
                 <li>
