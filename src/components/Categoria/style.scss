@@ -30,23 +30,39 @@
 
 .list_arrowLeft, .list_arrowRight {
     position: absolute;
+    z-index: 2;
+
     width: 40px;
     height: 100%;
-    background-color: #00000033;
-    z-index: 2;
+
+    background-color: #0000009f;
     opacity: 0;
+    
     display: flex;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
     cursor: pointer;
-
+    
     transition: opacity 0.5s;
+    
+    svg {
+        transition: width 0.3s, fill 0.3s;
+    }
+    
+    &:hover > svg {
+        width: 10px;
+        fill: white;
+
+    }
 }
 
 .list_arrowLeft {
     left: 0;
+    border-radius: 8px 0 0 8px;
 }
 
 .list_arrowRight {
     right: 0;
+    border-radius: 0 8px 8px 0;
 }
