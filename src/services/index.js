@@ -1,4 +1,9 @@
+import axios from "axios";
 import { initializeApp } from "firebase/app";
+
+const instance = axios.create({
+  baseURL: "https://conteudos.bloxs.com.br/wp-json/wp/v2/posts?_embed=1",
+});
 
 const firebaseConfig = {
     apiKey: "AIzaSyCHgmTS1MgfTFn0QlYM6y5qphg4ijEoabo",
@@ -11,4 +16,5 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-export { app }
+export { app, instance }
+
