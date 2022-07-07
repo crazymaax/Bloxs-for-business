@@ -18,23 +18,28 @@ export const UserProvider = ({ children }) => {
 
     if (result.user) {
       const { uid, displayName, photoURL } = result.user
-      if (!displayName || !photoURL) {
 
-        setUser({
-          id: uid,
-          avatar: userBlank,
-          name: "Usuário do Google"
-        })
-
+      const newUser = {
+        id: uid,
+        avatar: userBlank,
+        name: "Usuário do Google"
+      }
+      
+      if (!displayName) {
+        newUser.avatar = photoURL
+        setUser(newUser)
+        
+      }else if(!photoURL) {
+        newUser.name = displayName
+        setUser(newUser)
+        
+      }else{
+        newUser.avatar = photoURL
+        newUser.name = displayName
+        setUser(newUser)
       }
 
-      setUser({
-        id: uid,
-        avatar: photoURL,
-        name: displayName
-      })
-
-      localStorage.setItem("@Bloxs:user", JSON.stringify(result.user.uid))
+      localStorage.setItem("@Bloxs:user", JSON.stringify(newUser))
     }
   }
 
