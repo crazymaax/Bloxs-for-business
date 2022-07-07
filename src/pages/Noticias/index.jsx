@@ -3,6 +3,7 @@ import Header from "../../components/Header"
 
 import { useAuth } from "../../providers/user"
 import { useHistory } from "react-router-dom"
+import Categoria from "../../components/Categoria"
 
 const Noticias = () => {
 
@@ -20,7 +21,7 @@ const Noticias = () => {
 
                 <Header PageName={"Notícias"} />
                 <main>
-                    noticias
+                    <Categoria/>
                 </main>
             </div>
         </div>
