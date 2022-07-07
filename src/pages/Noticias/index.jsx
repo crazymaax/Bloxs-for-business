@@ -1,21 +1,19 @@
 import Aside from "../../components/Aside/index"
+import Header from "../../components/Header"
 
 const Noticias = () => {
 
     return (
         <div className="pageContent">
             <Aside />
+            <div className="pageContent__main">
 
-            <header className="">
-                <h1>
-                    Notícias
-                </h1>
-                <div>
-                    itens...
-                </div>
-            </header>
+                <Header PageName={"Notícias"} />
+                <main>
+                    noticias
+                </main>
+            </div>
         </div>
-
     )
 }
 
