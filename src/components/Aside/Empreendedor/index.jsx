@@ -1,20 +1,34 @@
+import Dashboard from "../../../assets/icons/dashboard.svg"
+import Empresas from "../../../assets/icons/empresas.svg"
+import Projetos from "../../../assets/icons/projetos.svg"
+import Chat from "../../../assets/icons/chat.svg"
+import Proventos from "../../../assets/icons/proventos.svg"
+import Indicacoes from "../../../assets/icons/indicacoes.svg"
+
 const Empreendedor = () => {
 
     return (
-        <div>
+        <div className="nav_group">
             <span>ÁREA DO EMPREGADOR</span>
 
             <ul>
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a href="#">
+                        <img src={Dashboard} />
+                        <span>Dashboard</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Empresas</a>
+                    <a href="#">
+                        <img src={Empresas} />
+                        <span>Empresas</span>
+                    </a>
                 </li>
                 <li>
                     <details>
                         <summary>
-                            Projetos
+                            <img src={Projetos} />
+                            <span>Projetos</span>
                         </summary>
                         <div>
                             <a href="#">Projeto 1</a>
@@ -24,13 +38,22 @@ const Empreendedor = () => {
                     </details>
                 </li>
                 <li>
-                    <a href="#">Chat</a>
+                    <a href="#">
+                        <img src={Chat} />
+                        <span>Chat</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Proventos</a>
+                    <a href="#">
+                        <img src={Proventos} />
+                        <span>Proventos</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="#">Indicações</a>
+                    <a href="#">
+                        <img src={Indicacoes} />
+                        <span>Indicações</span>
+                    </a>
                 </li>
             </ul>
 
