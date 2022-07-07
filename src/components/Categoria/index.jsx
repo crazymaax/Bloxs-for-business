@@ -1,46 +1,77 @@
+import { useEffect } from "react"
+import { useNews } from "../../providers/noticias"
+
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa"
+
 import "./style.scss"
 
 const Categoria = () => {
+
+    const { energyNews, agroNews, listNews, FormatDate } = useNews()
+
+    useEffect(() => {
+        const energy = listNews("Energia", 1)
+        const agro = listNews("Agronegócio", 1)
+        console.log(energyNews)
+        console.log(agroNews)
+    }, [])
 
     return (
         <div className="main__category">
             <h2>Energia</h2>
 
             <div className="category__list">
-                <div className="list__container">
-                    <img src="https://img.olhardigital.com.br/wp-content/uploads/2018/09/20180903133856-860x450.jpg" alt="" />
-                    <strong>titulo da noticia</strong>
-                    <span>data da noticia</span>
+                <div className="list_arrowLeft">
+                    <FaAngleLeft size={30} />
                 </div>
-                <div className="list__container">
-                    <img src="https://img.olhardigital.com.br/wp-content/uploads/2018/09/20180903133856-860x450.jpg" alt="" />
-                    <strong>titulo da noticia</strong>
-                    <span>data da noticia</span>
-                </div>
-                <div className="list__container">
-                    <img src="https://img.olhardigital.com.br/wp-content/uploads/2018/09/20180903133856-860x450.jpg" alt="" />
-                    <strong>titulo da noticia</strong>
-                    <span>data da noticia</span>
+                {energyNews.map((item) => {
+                    const { modified, title, id, yoast_head_json: { og_image } } = item
+
+                    const photoUrl = og_image[0].url
+                    const itemTitle = title.rendered
+                    const dateFormatted = FormatDate(modified)
+
+                    return (
+                        <div className="list__container" key={id}>
+                            <img src={photoUrl} alt={itemTitle} />
+                            <strong>{itemTitle}</strong>
+                            <span>{dateFormatted}</span>
+                        </div>
+                    )
+
+                })}
+                <div className="list_arrowRight">
+                    <FaAngleRight size={30} />
                 </div>
             </div>
 
             <h2>Agronegócio</h2>
 
             <div className="category__list">
-                <div className="list__container">
-                    <img src="https://img.olhardigital.com.br/wp-content/uploads/2018/09/20180903133856-860x450.jpg" alt="" />
-                    <strong>titulo da noticia</strong>
-                    <span>data da noticia</span>
+                <div className="list_arrowLeft">
+                    <FaAngleLeft size={30} />
                 </div>
-                <div className="list__container">
-                    <img src="https://img.olhardigital.com.br/wp-content/uploads/2018/09/20180903133856-860x450.jpg" alt="" />
-                    <strong>titulo da noticia</strong>
-                    <span>data da noticia</span>
-                </div>
-                <div className="list__container">
-                    <img src="https://img.olhardigital.com.br/wp-content/uploads/2018/09/20180903133856-860x450.jpg" alt="" />
-                    <strong>titulo da noticia</strong>
-                    <span>data da noticia</span>
+                {agroNews.map((item) => {
+                    const { modified, title, id, yoast_head_json: { og_image } } = item
+
+
+                    const photoUrl = og_image[0].url
+                    const itemTitle = title.rendered
+                    const dateFormatted = FormatDate(modified)
+
+                    return (
+
+                        <div className="list__container" key={id}>
+                            <img src={photoUrl} alt={itemTitle} />
+                            <strong>{itemTitle}</strong>
+                            <span>{dateFormatted}</span>
+                        </div>
+                    )
+
+
+                })}
+                <div className="list_arrowRight">
+                    <FaAngleRight size={30} />
                 </div>
             </div>
 
