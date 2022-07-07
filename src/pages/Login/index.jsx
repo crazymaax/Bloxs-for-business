@@ -1,10 +1,23 @@
+import { useEffect } from "react";
 import "./style.scss"
 
 import { FaHandPointer, FaChartLine, FaShieldAlt, FaHandHoldingUsd } from "react-icons/fa"
 
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
+
+import { useAuth } from "../../providers/user";
+
 
 const Login = () => {
+
+    const {user, handleGoogleLogin} = useAuth()
+    const history = useHistory()
+
+    useEffect(()=> {
+        if(user){
+            history.push("/noticias")
+        }
+    } ,[user])
 
     return (
         <div className="loginContainer">
@@ -50,14 +63,14 @@ const Login = () => {
 
                 <span>Informe seus dados de acesso</span>
 
-                <input type="text" placeholder="E-mail"/>
-                <input type="password" placeholder="Senha"/>
+                <input type="text" placeholder="E-mail" />
+                <input type="password" placeholder="Senha" />
 
                 <button>ENTRAR</button>
-                <button>Acessar com conta Google</button>
 
                 <span> Ainda não possui conta? <Link to="/register">Cadastre-se agora!</Link> </span>
             </form>
+            <button onClick={handleGoogleLogin}>Acessar com conta Google</button> {/* Retirado do form para o teste de login */}
         </div>
     )
 }
