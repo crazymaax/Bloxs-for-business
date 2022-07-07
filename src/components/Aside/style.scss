@@ -2,44 +2,68 @@
 
 .mainContent__aside {
     height: 100vh;
-    padding: 0px 15px;
+    width: 230px;
     background-color: utilities.$aside-background-color-1;
-    
+
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
+
     &::-webkit-scrollbar {
         display: none;
     }
 }
 
-.aside__image {
+.aside__header {
+    padding: 0px 15px;
+    margin-bottom: 10px;
+    background-color: utilities.$aside-background-color-2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__image {
+    padding: 10px 0;
     cursor: pointer;
-    
+
     img {
-        width: 20rem;
+        width: 10rem;
     }
-    
+
     figcaption {
         display: none;
     }
+}
+
+.header__arrowImage {
+    cursor: pointer;
 }
 
 .aside__nav {
     height: 100%;
     font-size: 1rem;
     padding: 30px 22px 30px 22px;
+    padding: 0px 15px;
 
     a {
         text-decoration: none;
         color: utilities.$aside-textcolor-1;
     }
-    
-    > div {
+
+    a:first-child {
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        margin-right: 5px;
+    }
+
+    .nav_group {
         margin-top: 30px;
 
-        span {
+        span:first-child {
             color: utilities.$aside-textcolor-2;
         }
 
@@ -49,31 +73,28 @@
             gap: 12px;
 
             margin-top: 15px;
-
-
-            details {
-                display: flex;
-            }
             
             details {
+                display: flex;
                 cursor: pointer;
 
                 summary {
-                    
+
                     color: utilities.$aside-textcolor-1;
                     list-style: none;
+
                     &::-webkit-details-marker {
                         display: none;
                     }
                 }
-            
+
                 div {
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
-                    
-                    margin-top: 10px;
-                    padding-left: 10px;
+
+                    margin-top: 13px;
+                    padding-left: 40px;
                 }
             }
         }
@@ -82,7 +103,7 @@
 
 .aside__button {
     padding: 10px 0px;
-    width: 100%;
+    width: 90%;
 
     background-color: utilities.$aside-secondary-color;
     color: white;
@@ -91,7 +112,7 @@
 
     border: transparent;
     border-radius: 8px;
-    
+
     align-self: center;
 
     margin-bottom: 20px;
