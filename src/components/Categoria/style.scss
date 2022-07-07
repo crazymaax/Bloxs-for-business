@@ -16,18 +16,51 @@
 
 .category__list {
     display: flex;
+    justify-content: space-between;
     gap: 25px;
     margin-bottom: 40px;
+
+    position: relative;
+
+}
+
+.list_arrowLeft, .list_arrowRight {
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background-color: #00000033;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.list_arrowLeft {
+    left: 0;
+}
+
+.list_arrowRight {
+    right: 0;
 }
 
 .list__container {
-    width: 200px;
+    width: 30%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
 
     img {
         width: 100%;
-        height: 120px;
+        height: 170px;
         border-radius: 8px;
+        object-fit: cover;
+
+        transition: all 0.3s;
+        &:hover {
+            height: 180px;
+        }
     }
 }
