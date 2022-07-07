@@ -15,6 +15,7 @@
 }
 
 .aside__image {
+    cursor: pointer;
     
     img {
         width: 20rem;
@@ -30,6 +31,11 @@
     font-size: 1rem;
     padding: 30px 22px 30px 22px;
 
+    a {
+        text-decoration: none;
+        color: utilities.$aside-textcolor-1;
+    }
+    
     > div {
         margin-top: 30px;
 
@@ -44,10 +50,6 @@
 
             margin-top: 15px;
 
-            a {
-                text-decoration: none;
-                color: utilities.$aside-textcolor-1;
-            }
 
             details {
                 display: flex;
