@@ -2,6 +2,7 @@ import { Route, Switch } from "react-router-dom";
 
 import Login from "../pages/Login";
 import Dashboard from "../pages/Empregador/Dashboard";
+import Empresas from "../pages/Empregador/Empresas";
 import Academy from "../pages/Comunidade/Academy";
 import Eventos from "../pages/Comunidade/Eventos";
 import Noticias from "../pages/Comunidade/Noticias"
@@ -15,6 +16,7 @@ const Routes = () => {
             <Route exact path="/" component={Login} />
 
             <Route exact path="/empregador/dashboard" component={Dashboard} />
+            <Route exact path="/empregador/empresas" component={Empresas} />
 
             <Route exact path="/comunidade/forum" component={Forum} />
             <Route exact path="/comunidade/academy" component={Academy} />
