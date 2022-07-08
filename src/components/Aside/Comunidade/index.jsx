@@ -39,7 +39,7 @@ const Comunidade = () => {
                     </details>
                 </li>
                 <li>
-                    <Link to="/noticias">
+                    <Link to="/comunidade/noticias">
                         <img src={Noticias} />
                         <span>Notícias</span>
                     </Link>
