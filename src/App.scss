@@ -1,11 +1,15 @@
 @use "./style/utilities";
 
 .pageContent {
-  background-color: green;
   display: flex;
   width: 100%;
 }
 
 .pageContent__main {
-  width: 100%;
+  width: calc(100% - 230px);
+  
+  main {
+    padding: 20px;
+    background-color: utilities.$main-background-color;
+  }
 }
