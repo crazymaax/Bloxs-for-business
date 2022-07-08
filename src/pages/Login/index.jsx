@@ -15,7 +15,7 @@ const Login = () => {
 
     useEffect(()=> {
         if(user){
-            history.push("/noticias")
+            history.push("/comunidade/noticias")
         }
     } ,[user])
 
