@@ -11,7 +11,7 @@ import Eventos from "../pages/Comunidade/Eventos";
 import Noticias from "../pages/Comunidade/Noticias"
 import Servicos from "../pages/Comunidade/Servicos";
 import Forum from "../pages/Comunidade/Forum";
-import Indicacoes from "../pages/Empregador/Inidicacoes";
+import Indicacoes from "../pages/Empregador/Indicacoes";
 
 const Routes = () => {
 
