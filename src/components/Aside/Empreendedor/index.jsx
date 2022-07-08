@@ -46,10 +46,10 @@ const Empreendedor = () => {
                     </Link>
                 </li>
                 <li>
-                    <a href="#">
+                    <Link to="/empregador/proventos">
                         <img src={Proventos} />
                         <span>Proventos</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     <a href="#">

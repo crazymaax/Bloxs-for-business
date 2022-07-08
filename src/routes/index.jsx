@@ -5,6 +5,7 @@ import Dashboard from "../pages/Empregador/Dashboard";
 import Empresas from "../pages/Empregador/Empresas";
 import Projetos from "../pages/Empregador/Projetos";
 import Chat from "../pages/Empregador/Chat";
+import Proventos from "../pages/Empregador/Proventos";
 import Academy from "../pages/Comunidade/Academy";
 import Eventos from "../pages/Comunidade/Eventos";
 import Noticias from "../pages/Comunidade/Noticias"
@@ -21,6 +22,7 @@ const Routes = () => {
             <Route exact path="/empregador/empresas" component={Empresas} />
             <Route exact path="/empregador/projetos:slug" component={Projetos} />
             <Route exact path="/empregador/chat" component={Chat} />
+            <Route exact path="/empregador/proventos" component={Proventos} />
 
             <Route exact path="/comunidade/forum" component={Forum} />
             <Route exact path="/comunidade/academy" component={Academy} />
