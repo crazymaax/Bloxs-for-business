@@ -52,10 +52,10 @@ const Empreendedor = () => {
                     </Link>
                 </li>
                 <li>
-                    <a href="#">
+                    <Link to="/empregador/indicacoes">
                         <img src={Indicacoes} />
                         <span>Indicações</span>
-                    </a>
+                    </Link>
                 </li>
             </ul>
 
