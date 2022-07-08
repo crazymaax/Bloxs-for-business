@@ -15,13 +15,13 @@ const Empreendedor = () => {
 
             <ul>
                 <li>
-                    <Link to="/empregador/dashboard">
+                    <Link to="/empregador/dashboard" id="dashboard">
                         <img src={Dashboard} />
                         <span>Dashboard</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/empregador/empresas">
+                    <Link to="/empregador/empresas" id="empresas">
                         <img src={Empresas} />
                         <span>Empresas</span>
                     </Link>
@@ -33,26 +33,41 @@ const Empreendedor = () => {
                             <span>Projetos</span>
                         </summary>
                         <div>
-                            <Link to="/empregador/projetos:projeto_1">Projeto 1</Link>
-                            <Link to="/empregador/projetos:projeto_2">Projeto 2</Link>
-                            <Link to="/empregador/projetos:projeto_3">Projeto 3</Link>
+                            <Link
+                                to="/empregador/projetos:projeto_1"
+                                id="projetos:projeto_1"
+                            >
+                                Projeto 1
+                            </Link>
+                            <Link
+                                to="/empregador/projetos:projeto_2"
+                                id="projetos:projeto_2"
+                            >
+                                Projeto 2
+                            </Link>
+                            <Link
+                                to="/empregador/projetos:projeto_3"
+                                id="projetos:projeto_3"
+                            >
+                                Projeto 3
+                            </Link>
                         </div>
                     </details>
                 </li>
                 <li>
-                    <Link to="/empregador/chat">
+                    <Link to="/empregador/chat" id="chat">
                         <img src={Chat} />
                         <span>Chat</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/empregador/proventos">
+                    <Link to="/empregador/proventos" id="proventos">
                         <img src={Proventos} />
                         <span>Proventos</span>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/empregador/indicacoes">
+                    <Link to="/empregador/indicacoes" id="indicacoes">
                         <img src={Indicacoes} />
                         <span>Indicações</span>
                     </Link>
