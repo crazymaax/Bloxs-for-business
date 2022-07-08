@@ -40,10 +40,10 @@ const Empreendedor = () => {
                     </details>
                 </li>
                 <li>
-                    <a href="#">
+                    <Link to="/empregador/chat">
                         <img src={Chat} />
                         <span>Chat</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     <a href="#">
