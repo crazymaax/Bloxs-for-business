@@ -45,10 +45,10 @@ const Comunidade = () => {
                     </Link>
                 </li>
                 <li>
-                    <a href="#">
+                    <Link to="/comunidade/servicos">
                         <img src={Servicos} />
                         <span>Serviços</span>
-                    </a>
+                    </Link>
                 </li>
             </ul>
 
