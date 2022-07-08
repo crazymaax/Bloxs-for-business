@@ -20,10 +20,10 @@ const Comunidade = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <Link to="/comunidade/academy">
                         <img src={Academy} />
                         <span>Academy</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     <details>
