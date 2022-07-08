@@ -1,9 +1,9 @@
-import Aside from "../../components/Aside/index"
-import Header from "../../components/Header"
+import Aside from "../../../components/Aside/index"
+import Header from "../../../components/Header"
 
-import { useAuth } from "../../providers/user"
+import { useAuth } from "../../../providers/user"
 import { useHistory } from "react-router-dom"
-import Categoria from "../../components/Categoria"
+import Categoria from "../../../components/Categoria"
 
 const Noticias = () => {
 

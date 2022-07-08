@@ -1,0 +1,24 @@
+@use "../../style/utilities";
+
+.main__underConstructionContainer {
+    @include utilities.pageContainer;
+}
+
+.underConstructionContainer__constructionDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    line-height: 1.5;
+
+    img {
+        width: 25vh;
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: 800;
+        color: utilities.$main-title-color;
+    }
+}

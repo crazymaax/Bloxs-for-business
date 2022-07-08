@@ -1,17 +1,7 @@
 @use "../../style/utilities";
 
 .main__category {
-    padding: 40px;
-    background-color: utilities.$main-background-color-2;
-    border-radius: 10px;
-    h2 {
-        color: utilities.$main-category-color;
-        font-size: 22px;
-        font-weight: 800;
-        padding-bottom: 15px;
-        border-bottom: 1px dashed utilities.$main-date-color;
-        margin-bottom: 25px;
-    }
+    @include utilities.pageContainer;
 }
 
 .category__list {
