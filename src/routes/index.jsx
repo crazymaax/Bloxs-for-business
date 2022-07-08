@@ -11,6 +11,7 @@ import Eventos from "../pages/Comunidade/Eventos";
 import Noticias from "../pages/Comunidade/Noticias"
 import Servicos from "../pages/Comunidade/Servicos";
 import Forum from "../pages/Comunidade/Forum";
+import Indicacoes from "../pages/Empregador/Inidicacoes";
 
 const Routes = () => {
 
@@ -23,6 +24,7 @@ const Routes = () => {
             <Route exact path="/empregador/projetos:slug" component={Projetos} />
             <Route exact path="/empregador/chat" component={Chat} />
             <Route exact path="/empregador/proventos" component={Proventos} />
+            <Route exact path="/empregador/indicacoes" component={Indicacoes} />
 
             <Route exact path="/comunidade/forum" component={Forum} />
             <Route exact path="/comunidade/academy" component={Academy} />
