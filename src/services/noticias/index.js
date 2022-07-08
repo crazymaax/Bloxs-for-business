@@ -13,7 +13,10 @@ export const listNewsApi = async (category, page) => {
     const response = await instance
         .get(`&categories=${categoryNumber}&page=${page}&per_page=3`)
         .then((response) => {
-            return response.data
+            return response
+        })
+        .catch((error) => {
+            return false
         })
 
     return response;
