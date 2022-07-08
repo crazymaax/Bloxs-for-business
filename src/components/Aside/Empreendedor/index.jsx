@@ -33,9 +33,9 @@ const Empreendedor = () => {
                             <span>Projetos</span>
                         </summary>
                         <div>
-                            <a href="#">Projeto 1</a>
-                            <a href="#">Projeto 2</a>
-                            <a href="#">Projeto 3</a>
+                            <Link to="/empregador/projetos:projeto_1">Projeto 1</Link>
+                            <Link to="/empregador/projetos:projeto_2">Projeto 2</Link>
+                            <Link to="/empregador/projetos:projeto_3">Projeto 3</Link>
                         </div>
                     </details>
                 </li>
