@@ -42,6 +42,12 @@ const Aside = () => {
         giveActiveClassName()
     }, [location])
 
+    const changeAsideWidth = (e) => {
+        const aside = e.parentElement.parentElement
+        aside.classList.toggle("closed")
+
+    }
+
     return (
         <aside className="mainContent__aside">
             <div className="aside__header">
@@ -50,14 +56,13 @@ const Aside = () => {
                     <img
                         src={bloxsLogo}
                         alt="Logo da Bloxs"
-                        onClick={() => history.push("/")}
                     />
                     <figcaption>Logo da Bloxs</figcaption>
                 </figure>
 
                 <img
                     src={menuArrows}
-                    onClick={() => console.log("recolheu o menu")}
+                    onClick={(e) => changeAsideWidth(e.target)}
                     className="header__arrowImage"
                 />
             </div>

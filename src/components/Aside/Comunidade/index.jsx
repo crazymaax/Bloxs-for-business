@@ -36,19 +36,25 @@ const Comunidade = () => {
                                 to="/comunidade/eventos:evento_1"
                                 id="eventos:evento_1"
                             >
-                                Evento 1
+                                <span>
+                                    Evento 1
+                                </span>
                             </Link>
                             <Link
                                 to="/comunidade/eventos:evento_2"
                                 id="eventos:evento_2"
                             >
-                                Evento 2
+                                <span>
+                                    Evento 2
+                                </span>
                             </Link>
                             <Link
                                 to="/comunidade/eventos:evento_3"
                                 id="eventos:evento_3"
                             >
-                                Evento 3
+                                <span>
+                                    Evento 3
+                                </span>
                             </Link>
                         </div>
                     </details>

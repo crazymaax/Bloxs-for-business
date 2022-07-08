@@ -37,19 +37,25 @@ const Empreendedor = () => {
                                 to="/empregador/projetos:projeto_1"
                                 id="projetos:projeto_1"
                             >
-                                Projeto 1
+                                <span>
+                                    Projeto 1
+                                </span>
                             </Link>
                             <Link
                                 to="/empregador/projetos:projeto_2"
                                 id="projetos:projeto_2"
                             >
-                                Projeto 2
+                                <span>
+                                    Projeto 2
+                                </span>
                             </Link>
                             <Link
                                 to="/empregador/projetos:projeto_3"
                                 id="projetos:projeto_3"
                             >
-                                Projeto 3
+                                <span>
+                                    Projeto 3
+                                </span>
                             </Link>
                         </div>
                     </details>
