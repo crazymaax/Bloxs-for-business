@@ -5,6 +5,8 @@ import Chat from "../../../assets/icons/chat.svg"
 import Proventos from "../../../assets/icons/proventos.svg"
 import Indicacoes from "../../../assets/icons/indicacoes.svg"
 
+import { Link } from "react-router-dom"
+
 const Empreendedor = () => {
 
     return (
@@ -13,10 +15,10 @@ const Empreendedor = () => {
 
             <ul>
                 <li>
-                    <a href="#">
+                    <Link to="/empregador/dashboard">
                         <img src={Dashboard} />
                         <span>Dashboard</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     <a href="#">
