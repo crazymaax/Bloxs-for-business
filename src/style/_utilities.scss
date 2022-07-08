@@ -20,3 +20,12 @@ $main-background-color-2: #FFFFFF;
 $main-title-color: #191C32;
 $main-category-color: #000000;
 $main-date-color: #7F8299;
+
+@mixin anchorHoverColor {
+    color: $aside-textcolor-1;
+    transition: color 0.5s;
+    &:hover {
+        color: $aside-active-textcolor;
+    }
+
+}

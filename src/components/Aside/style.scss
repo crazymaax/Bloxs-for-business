@@ -45,15 +45,11 @@
     font-size: 1rem;
     padding: 30px 22px 30px 22px;
     padding: 0px 15px;
-
-    a {
-        text-decoration: none;
-        color: utilities.$aside-textcolor-1;
-    }
-
+    
     a:first-child {
         display: flex;
         align-items: center;
+        @include utilities.anchorHoverColor;
     }
 
     img {
@@ -62,6 +58,7 @@
 
     .nav_group {
         margin-top: 30px;
+        
 
         span:first-child {
             color: utilities.$aside-textcolor-2;
@@ -73,6 +70,10 @@
             gap: 12px;
 
             margin-top: 15px;
+
+            li > a, details > summary, div > a {
+                @include utilities.anchorHoverColor;
+            }
             
             details {
                 display: flex;
