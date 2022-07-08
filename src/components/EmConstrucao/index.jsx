@@ -11,22 +11,21 @@ const EmConstrucao = ({ slug }) => {
         const slugFormater = () => {
             const newSlug = slug.slice(1, slug.length).replaceAll("_", " ")
             const newSlugFormatted = newSlug.charAt(0).toUpperCase() + newSlug.slice(1);
-    
+
             setPageName(newSlugFormatted)
         }
 
         slugFormater()
 
-    } ,[])
-
+    }, [slug])
 
     return (
         <div className="main__underConstructionContainer">
-            {slug && (
-                <h2>{pageName}</h2>
-            )}
+
+            <h2>{pageName}</h2>
+
             <div className="underConstructionContainer__constructionDiv">
-                <img src={UnderConstruction} alt="Em construção"  className="constructionDiv__image"/>
+                <img src={UnderConstruction} alt="Em construção" className="constructionDiv__image" />
                 <h3>Em construção</h3>
                 <p>Estamos em constante crescimento e em breve está página ficará disponível, por favor volte novamente em breve. </p>
             </div>
