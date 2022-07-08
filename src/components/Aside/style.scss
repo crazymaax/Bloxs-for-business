@@ -78,9 +78,8 @@
 
             margin-top: 15px;
 
-            li > a,
             details > summary,
-            div > a {
+            a > span {
                 @include utilities.anchorHoverColor;
             }
             
@@ -129,7 +128,10 @@
 }
 
 .activePage {
-    color: utilities.$aside-active-textcolor !important;
+
+    span {
+        color: utilities.$aside-active-textcolor !important;
+    }
 
     img {
         filter: brightness(0) saturate(100%) invert(30%) sepia(16%) saturate(7490%) hue-rotate(185deg) brightness(92%) contrast(98%); // Equivalente a utilities.$aside-secondary-color
