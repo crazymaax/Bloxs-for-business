@@ -32,9 +32,9 @@ const Comunidade = () => {
                             <span>Eventos</span>
                         </summary>
                         <div>
-                            <a href="#">Evento 1</a>
-                            <a href="#">Evento 2</a>
-                            <a href="#">Evento 3</a>
+                            <a href="/comunidade/eventos:evento_1">Evento 1</a>
+                            <a href="/comunidade/eventos:evento_2">Evento 2</a>
+                            <a href="/comunidade/eventos:evento_3">Evento 3</a>
                         </div>
                     </details>
                 </li>
