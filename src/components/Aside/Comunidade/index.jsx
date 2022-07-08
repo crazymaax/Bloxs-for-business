@@ -14,10 +14,10 @@ const Comunidade = () => {
 
             <ul>
                 <li>
-                    <a href="#">
+                    <Link to="/comunidade/forum">
                         <img src={Forum} />
                         <span>Fórum</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     <Link to="/comunidade/academy">
