@@ -1,9 +1,13 @@
+import { useEffect } from "react"
 import "./style.scss"
 
 import Aside from "../../components/Aside"
 import Header from "../../components/Header"
+import Noticia from "../../components/Noticia"
 
 import { useAuth } from "../../providers/user"
+import { useNews } from "../../providers/noticias"
+
 import { Link, useHistory } from "react-router-dom"
 
 const Home = () => {
@@ -16,6 +20,21 @@ const Home = () => {
     if (!user) {
         history.push("/")
     }
+
+    const { energyNews, agroNews, energyPage, agroPage, listNews } = useNews()
+
+    useEffect(() => {
+
+        const fetchData = async () => {
+
+            listNews("Energia", energyPage)
+
+            listNews("Agronegócio", agroPage)
+
+        }
+
+        fetchData()
+    }, [energyPage, agroPage])
 
     return (
         <div className="pageContent">
@@ -39,8 +58,27 @@ const Home = () => {
                             <h2>Notícias</h2>
                             <p>Fique por dentro de todas as novidades do mercado.</p>
 
-                            <div>
-                                2 NOTICIAS
+                            <div className="card__homeNews">
+                                {energyNews.slice(0, 1).map((item) => {
+                                    const { id } = item
+                                    return (
+                                        <div className="homeNews__newsContainer">
+                                            <span>Energia</span>
+                                            <Noticia noticia={item} key={id} />
+                                        </div>
+                                    )
+
+                                })}
+                                {agroNews.slice(0, 1).map((item) => {
+                                    const { id } = item
+                                    return (
+                                        <div className="homeNews__newsContainer">
+                                            <span>Agronegócio</span>
+                                            <Noticia noticia={item} key={id} />
+                                        </div>
+                                    )
+
+                                })}
                             </div>
 
                             <Link to="/comunidade/noticias" className="card__button">Acessar</Link>
