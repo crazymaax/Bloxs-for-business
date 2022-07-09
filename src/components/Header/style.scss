@@ -1,5 +1,16 @@
 @use "../../style/utilities";
 
+@keyframes fade-in-top {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
 .main__header {
     width: 100%;
     background-color: utilities.$main-background-color-2;
@@ -34,12 +45,47 @@
     }
 }
 
-.user__image {
+.user__modalConfiguration {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
 
+.user__image {
+    
     img {
         width: 80px;
         border-radius: 8px;
         margin: 5px;
+        
+    }
+}
 
+.user__modal {
+    padding: 20px 40px;
+    background-color: utilities.$main-background-color;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: default;
+
+    position: absolute;
+    top: 70px;
+    right: calc(-40px + -45px); // -40px devido ao padding e -45 devido ao tamanho do botão configuração.
+
+    animation: fade-in-top 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    
+    button {
+        padding: 5px;
+        display: flex;
+        gap: 8px;
+        border: 2px solid utilities.$aside-icon-color;
+        border-radius: 4px;
+        font-weight: 600;
+
+        cursor: pointer;
+        
     }
 }
