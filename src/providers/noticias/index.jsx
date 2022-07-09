@@ -33,7 +33,7 @@ export const NewsProvider = ({ children }) => {
         var day = date.slice(8, 10)
         var month = date.slice(5, 7)
         var year = date.slice(0, 4)
-        let min = date.slice(14, 19)
+        let min = date.slice(11, 16)
 
         return `${day}/${month}/${year} ${min}`
     }
