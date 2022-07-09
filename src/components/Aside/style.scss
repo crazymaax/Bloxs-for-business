@@ -111,20 +111,9 @@
 }
 
 .aside__button {
-    padding: 10px 0px;
+    @include utilities.button;
     width: 90%;
-
-    background-color: utilities.$aside-secondary-color;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-
-    border: transparent;
-    border-radius: 8px;
-
-    align-self: center;
-
-    margin-bottom: 20px;
+    margin: 20px auto;
 }
 
 .activePage {
