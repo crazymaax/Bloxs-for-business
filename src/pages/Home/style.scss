@@ -1,0 +1,28 @@
+@use "../../style/utilities";
+
+.main__home {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.home__card {
+    padding: 32px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 0 rgb(76 87 125 / 2%);
+    background-color: utilities.$main-background-color-2;
+    background-image: url("https://media.istockphoto.com/vectors/abstract-white-background-geometric-texture-vector-id1298706128?k=20&m=1298706128&s=612x612&w=0&h=9hGAk9BklhIxvSrrUEaQRsEcZq8-R3n_z3uGzFNSkhI=");
+    background-repeat: no-repeat;
+
+    h2, span {
+        line-height: 1.8;
+        font-size: 22px;
+    }
+}
+
+.card__button {
+    @include utilities.button;
+}
