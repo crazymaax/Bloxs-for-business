@@ -15,7 +15,33 @@ $login-text-color-2: #FFC707;
 
 
 /* Variáveis para Main */
-$main-background-color: #FFFFFF;
-$main-title-color: #191C32;
-$main-category-color: #000000;
+$main-background-color: #F4F7FA;
+$main-background-color-2: #FFFFFF;
+$main-text-color: #191C32;
+$main-title-color: #000000;
 $main-date-color: #7F8299;
+
+@mixin pageContainer {
+    padding: 40px;
+    background-color: $main-background-color-2;
+    border-radius: 10px;
+    color: $main-text-color;
+    h2 {
+        color: $main-title-color;
+        font-size: 22px;
+        font-weight: 800;
+        padding-bottom: 15px;
+        border-bottom: 1px dashed $main-date-color;
+        margin-bottom: 25px;
+    }
+
+}
+
+@mixin anchorHoverColor {
+    color: $aside-textcolor-1;
+    transition: color 0.5s;
+    &:hover {
+        color: $aside-active-textcolor;
+    }
+
+}

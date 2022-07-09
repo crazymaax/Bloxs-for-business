@@ -14,16 +14,16 @@ const Comunidade = () => {
 
             <ul>
                 <li>
-                    <a href="#">
+                    <Link to="/comunidade/forum" id="forum">
                         <img src={Forum} />
                         <span>Fórum</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#">
+                    <Link to="/comunidade/academy" id="academy">
                         <img src={Academy} />
                         <span>Academy</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     <details>
@@ -32,23 +32,44 @@ const Comunidade = () => {
                             <span>Eventos</span>
                         </summary>
                         <div>
-                            <a href="#">Evento 1</a>
-                            <a href="#">Evento 2</a>
-                            <a href="#">Evento 3</a>
+                            <Link
+                                to="/comunidade/eventos:evento_1"
+                                id="eventos:evento_1"
+                            >
+                                <span>
+                                    Evento 1
+                                </span>
+                            </Link>
+                            <Link
+                                to="/comunidade/eventos:evento_2"
+                                id="eventos:evento_2"
+                            >
+                                <span>
+                                    Evento 2
+                                </span>
+                            </Link>
+                            <Link
+                                to="/comunidade/eventos:evento_3"
+                                id="eventos:evento_3"
+                            >
+                                <span>
+                                    Evento 3
+                                </span>
+                            </Link>
                         </div>
                     </details>
                 </li>
                 <li>
-                    <Link to="/noticias">
+                    <Link to="/comunidade/noticias" id="noticias">
                         <img src={Noticias} />
                         <span>Notícias</span>
                     </Link>
                 </li>
                 <li>
-                    <a href="#">
+                    <Link to="/comunidade/servicos" id="servicos">
                         <img src={Servicos} />
                         <span>Serviços</span>
-                    </a>
+                    </Link>
                 </li>
             </ul>
 

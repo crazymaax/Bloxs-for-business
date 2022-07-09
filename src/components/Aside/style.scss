@@ -10,23 +10,26 @@
     overflow-y: auto;
     overflow-x: hidden;
 
+    position: fixed;
+
     &::-webkit-scrollbar {
         display: none;
     }
+    transition: width 1s ease-in-out;
 }
 
 .aside__header {
+    height: 44px;
     padding: 0px 15px;
     margin-bottom: 10px;
     background-color: utilities.$aside-background-color-2;
-    display: flex;
-    justify-content: space-between;
+    position: relative;
 }
 
 .header__image {
     padding: 10px 0;
     cursor: pointer;
-
+    
     img {
         width: 10rem;
     }
@@ -37,6 +40,10 @@
 }
 
 .header__arrowImage {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    width: 24px;
     cursor: pointer;
 }
 
@@ -45,15 +52,11 @@
     font-size: 1rem;
     padding: 30px 22px 30px 22px;
     padding: 0px 15px;
-
-    a {
-        text-decoration: none;
-        color: utilities.$aside-textcolor-1;
-    }
-
+    
     a:first-child {
         display: flex;
         align-items: center;
+        @include utilities.anchorHoverColor;
     }
 
     img {
@@ -62,6 +65,7 @@
 
     .nav_group {
         margin-top: 30px;
+        
 
         span:first-child {
             color: utilities.$aside-textcolor-2;
@@ -73,6 +77,11 @@
             gap: 12px;
 
             margin-top: 15px;
+
+            details > summary,
+            a > span {
+                @include utilities.anchorHoverColor;
+            }
             
             details {
                 display: flex;
@@ -116,4 +125,41 @@
     align-self: center;
 
     margin-bottom: 20px;
+}
+
+.activePage {
+
+    span {
+        color: utilities.$aside-active-textcolor !important;
+    }
+
+    img {
+        filter: brightness(0) saturate(100%) invert(30%) sepia(16%) saturate(7490%) hue-rotate(185deg) brightness(92%) contrast(98%); // Equivalente a utilities.$aside-secondary-color
+    }
+}
+
+.closed {
+    width: 45px;
+
+    img:nth-child(2) {
+        transform: rotate(180deg);
+        transition: transform 0.9s;
+    }
+
+    figure {
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+    span {
+        opacity: 0;
+        white-space: nowrap;
+        transition: all 1s;
+    }
+
+    button {
+        display: none;
+    }
+
+    transition: width 1s ease-in-out;
 }

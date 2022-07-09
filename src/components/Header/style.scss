@@ -13,14 +13,14 @@
 
 .main__header {
     width: 100%;
-    background-color: utilities.$main-background-color;
+    background-color: utilities.$main-background-color-2;
     box-shadow: 0px 20px 50px 5px rgba(105,105,105,0.65);
     
     display: flex;
     align-items: center;
     justify-content: space-between;
     h1 {
-        color: utilities.$main-title-color;
+        color: utilities.$main-text-color;
         font-size: 20px;
         font-weight: 800;
         margin-left: 30px;

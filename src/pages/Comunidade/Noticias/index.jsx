@@ -1,8 +1,9 @@
-import Aside from "../../components/Aside/index"
-import Header from "../../components/Header"
+import Aside from "../../../components/Aside/index"
+import Header from "../../../components/Header"
 
-import { useAuth } from "../../providers/user"
+import { useAuth } from "../../../providers/user"
 import { useHistory } from "react-router-dom"
+import Categoria from "../../../components/Categoria"
 
 const Noticias = () => {
 
@@ -16,11 +17,11 @@ const Noticias = () => {
     return (
         <div className="pageContent">
             <Aside />
-            <div className="pageContent__main">
+            <div className="pageContent__main" style={{margin: "0px 0px 0px 230px"}}>
 
                 <Header PageName={"Notícias"} />
                 <main>
-                    noticias
+                    <Categoria/>
                 </main>
             </div>
         </div>

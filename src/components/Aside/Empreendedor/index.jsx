@@ -5,6 +5,8 @@ import Chat from "../../../assets/icons/chat.svg"
 import Proventos from "../../../assets/icons/proventos.svg"
 import Indicacoes from "../../../assets/icons/indicacoes.svg"
 
+import { Link } from "react-router-dom"
+
 const Empreendedor = () => {
 
     return (
@@ -13,16 +15,16 @@ const Empreendedor = () => {
 
             <ul>
                 <li>
-                    <a href="#">
+                    <Link to="/empregador/dashboard" id="dashboard">
                         <img src={Dashboard} />
                         <span>Dashboard</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#">
+                    <Link to="/empregador/empresas" id="empresas">
                         <img src={Empresas} />
                         <span>Empresas</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     <details>
@@ -31,29 +33,50 @@ const Empreendedor = () => {
                             <span>Projetos</span>
                         </summary>
                         <div>
-                            <a href="#">Projeto 1</a>
-                            <a href="#">Projeto 2</a>
-                            <a href="#">Projeto 3</a>
+                            <Link
+                                to="/empregador/projetos:projeto_1"
+                                id="projetos:projeto_1"
+                            >
+                                <span>
+                                    Projeto 1
+                                </span>
+                            </Link>
+                            <Link
+                                to="/empregador/projetos:projeto_2"
+                                id="projetos:projeto_2"
+                            >
+                                <span>
+                                    Projeto 2
+                                </span>
+                            </Link>
+                            <Link
+                                to="/empregador/projetos:projeto_3"
+                                id="projetos:projeto_3"
+                            >
+                                <span>
+                                    Projeto 3
+                                </span>
+                            </Link>
                         </div>
                     </details>
                 </li>
                 <li>
-                    <a href="#">
+                    <Link to="/empregador/chat" id="chat">
                         <img src={Chat} />
                         <span>Chat</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#">
+                    <Link to="/empregador/proventos" id="proventos">
                         <img src={Proventos} />
                         <span>Proventos</span>
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#">
+                    <Link to="/empregador/indicacoes" id="indicacoes">
                         <img src={Indicacoes} />
                         <span>Indicações</span>
-                    </a>
+                    </Link>
                 </li>
             </ul>
 
