@@ -20,9 +20,31 @@
     h2, span {
         line-height: 1.8;
         font-size: 22px;
+        font-weight: 800;
     }
 }
 
 .card__button {
     @include utilities.button;
+}
+
+.card__homeNews {
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+}
+
+.homeNews__newsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    span {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    a {
+        width: 100%;
+    }
 }
