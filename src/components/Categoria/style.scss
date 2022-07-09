@@ -4,13 +4,19 @@
     @include utilities.pageContainer;
 }
 
+.category__container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
 .category__list {
     height: 300px;
 
     display: flex;
     justify-content: space-between;
     gap: 25px;
-    margin-bottom: 40px;
 
     position: relative;
     &:hover > .list_arrowLeft, &:hover > .list_arrowRight {
@@ -55,4 +61,10 @@
 .list_arrowRight {
     right: 0;
     border-radius: 0 8px 8px 0;
+}
+
+.list__pagination {
+    text-align: end;
+    font-size: 12px;
+    color: utilities.$main-date-color;
 }
