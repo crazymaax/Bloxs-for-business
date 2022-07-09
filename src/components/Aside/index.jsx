@@ -7,12 +7,10 @@ import Home from "../../assets/icons/home.svg"
 import Comunidade from "./Comunidade";
 import Empreendedor from "./Empreendedor";
 
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 const Aside = () => {
-
-    const history = useHistory()
 
     const location = window.location.pathname
 
@@ -53,7 +51,6 @@ const Aside = () => {
             mainContent.style.margin = "0px 0px 0px 230px"
 
         }
-
     }
 
     return (
@@ -76,10 +73,10 @@ const Aside = () => {
             </div>
 
             <nav className="aside__nav">
-                <a href="#">
-                    <img src={Home} />
+                <Link to="/home">
+                    <img src={Home} id="home"/>
                     <span>Home</span>
-                </a>
+                </Link>
                 <Empreendedor />
                 <Comunidade />
             </nav>

@@ -43,5 +43,22 @@ $main-date-color: #7F8299;
     &:hover {
         color: $aside-active-textcolor;
     }
+}
 
+@mixin button {
+    padding: 10px 20px;
+    width: fit-content;
+    
+    background: linear-gradient(90deg, #084fb9 31%, #0068b0 91.25%);
+    border: transparent;
+    border-radius: 8px;
+    color: white;
+    
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        background: linear-gradient(#084fb9 31%, #0068b0 91.25%);
+    }
 }
