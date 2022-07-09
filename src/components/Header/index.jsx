@@ -28,6 +28,11 @@ const Header = ({ PageName }) => {
 
     }, [isOpenModal])
 
+    const handleLoggout = () => {
+        setUser()
+        localStorage.removeItem("@Bloxs:user")
+    }
+
     return (
         <header className="main__header">
             <h1>{PageName}</h1>
@@ -44,7 +49,7 @@ const Header = ({ PageName }) => {
                                 <BsFillGearFill color={"#414368"} />
                                 Configurações
                             </button>
-                            <button onClick={() => setUser()}>
+                            <button onClick={() => handleLoggout()}>
                                 <ImExit color={"#414368"} />
                                 Sair
                             </button>
