@@ -10,14 +10,14 @@ import { useAuth } from "../../providers/user";
 
 const Login = () => {
 
-    const {user, handleGoogleLogin} = useAuth()
+    const { user, handleGoogleLogin } = useAuth()
     const history = useHistory()
 
-    useEffect(()=> {
-        if(user){
+    useEffect(() => {
+        if (user) {
             history.push("/comunidade/noticias")
         }
-    } ,[user])
+    }, [user])
 
     return (
         <div className="loginContainer">
@@ -67,10 +67,10 @@ const Login = () => {
                 <input type="password" placeholder="Senha" />
 
                 <button>ENTRAR</button>
+                <button type="button" onClick={handleGoogleLogin}>Acessar com conta Google</button> {/* Retirado do form para o teste de login */}
 
                 <span> Ainda não possui conta? <Link to="/register">Cadastre-se agora!</Link> </span>
             </form>
-            <button onClick={handleGoogleLogin}>Acessar com conta Google</button> {/* Retirado do form para o teste de login */}
         </div>
     )
 }
