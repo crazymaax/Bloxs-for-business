@@ -14,14 +14,13 @@ const Home = () => {
 
     const { user } = useAuth()
     const history = useHistory()
-
-    const { name } = user;
+    const { energyNews, agroNews, energyPage, agroPage, listNews } = useNews()
 
     if (!user) {
         history.push("/")
     }
 
-    const { energyNews, agroNews, energyPage, agroPage, listNews } = useNews()
+    const { name } = user;
 
     useEffect(() => {
 
