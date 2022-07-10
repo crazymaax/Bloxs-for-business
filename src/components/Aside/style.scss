@@ -15,6 +15,7 @@
     &::-webkit-scrollbar {
         display: none;
     }
+
     transition: width 1s ease-in-out;
 }
 
@@ -29,7 +30,7 @@
 .header__image {
     padding: 10px 0;
     cursor: pointer;
-    
+
     img {
         width: 10rem;
     }
@@ -48,15 +49,31 @@
 }
 
 .aside__nav {
-    height: 100%;
     font-size: 1rem;
-    padding: 30px 22px 30px 22px;
-    padding: 0px 15px;
-    
-    a:first-child {
+    padding-bottom: 30px;
+
+    a {
         display: flex;
         align-items: center;
+        font-size: 13px;
+        margin-left: 15px;
+    }
+
+    li {
         @include utilities.anchorHoverColor;
+
+        &:hover > details > summary {
+
+            img {
+                filter: brightness(0) saturate(100%) invert(30%) sepia(16%) saturate(7490%) hue-rotate(185deg) brightness(92%) contrast(98%); // Equivalente a utilities.$aside-secondary-color
+            }
+
+            span {
+                transition: all 0.5s;
+                color: utilities.$aside-active-textcolor;
+                font-weight: 500;
+            }
+        }
     }
 
     img {
@@ -65,10 +82,10 @@
 
     .nav_group {
         margin-top: 30px;
-        
 
         span:first-child {
             color: utilities.$aside-textcolor-2;
+            margin-left: 15px;
         }
 
         ul {
@@ -78,19 +95,17 @@
 
             margin-top: 15px;
 
-            details > summary,
-            a > span {
-                @include utilities.anchorHoverColor;
-            }
-            
             details {
                 display: flex;
+                font-size: 13px;
+
+                margin-left: 15px;
                 cursor: pointer;
 
                 summary {
-
                     color: utilities.$aside-textcolor-1;
-                    list-style: none;
+                    display: flex;
+                    align-items: center;
 
                     &::-webkit-details-marker {
                         display: none;
@@ -103,7 +118,15 @@
                     gap: 10px;
 
                     margin-top: 13px;
-                    padding-left: 40px;
+                    padding-left: 10px;
+
+                    a:hover {
+                        span {
+                            transition: all 0.5s;
+                            color: utilities.$aside-active-textcolor;
+                            font-weight: 500;
+                        }
+                    }
                 }
             }
         }
@@ -119,7 +142,8 @@
 .activePage {
 
     span {
-        color: utilities.$aside-active-textcolor !important;
+        color: utilities.$aside-active-textcolor  !important;
+        font-weight: 500;
     }
 
     img {
