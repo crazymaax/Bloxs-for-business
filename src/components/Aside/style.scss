@@ -59,7 +59,7 @@
         margin-left: 15px;
     }
 
-    li {
+    .group__list { // li
         @include utilities.anchorHoverColor;
 
         &:hover > details > summary {
@@ -68,10 +68,14 @@
                 filter: brightness(0) saturate(100%) invert(30%) sepia(16%) saturate(7490%) hue-rotate(185deg) brightness(92%) contrast(98%); // Equivalente a utilities.$aside-secondary-color
             }
 
-            span {
+            span, svg {
                 transition: all 0.5s;
                 color: utilities.$aside-active-textcolor;
                 font-weight: 500;
+            }
+            
+            svg {
+                fill: utilities.$aside-active-textcolor;
             }
         }
     }
@@ -95,14 +99,14 @@
 
             margin-top: 15px;
 
-            details {
+            .list__details {
                 display: flex;
                 font-size: 13px;
 
                 margin-left: 15px;
                 cursor: pointer;
 
-                summary {
+                .details__summary {
                     color: utilities.$aside-textcolor-1;
                     display: flex;
                     align-items: center;
@@ -110,9 +114,23 @@
                     &::-webkit-details-marker {
                         display: none;
                     }
+
+                    .summary__text {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        span {
+                            margin: 0;
+                        }
+
+                        svg {
+                            margin-right: 15px;
+                        }
+                    }
                 }
 
-                div {
+                .details__links {
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
@@ -127,6 +145,12 @@
                             font-weight: 500;
                         }
                     }
+                }
+            }
+
+            details[open] {
+                svg {
+                    transform: rotate(90deg);
                 }
             }
         }
@@ -149,6 +173,11 @@
     img {
         filter: brightness(0) saturate(100%) invert(30%) sepia(16%) saturate(7490%) hue-rotate(185deg) brightness(92%) contrast(98%); // Equivalente a utilities.$aside-secondary-color
     }
+
+    svg {
+        fill: utilities.$aside-active-textcolor
+    }
+
 }
 
 .closed {
