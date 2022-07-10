@@ -4,6 +4,8 @@ import Eventos from "../../../assets/icons/eventos.svg"
 import Noticias from "../../../assets/icons/noticias.svg"
 import Servicos from "../../../assets/icons/servicos.svg"
 
+import { FaAngleRight } from "react-icons/fa"
+
 import { Link } from "react-router-dom";
 
 const Comunidade = () => {
@@ -13,25 +15,28 @@ const Comunidade = () => {
             <span>COMUNIDADE</span>
 
             <ul>
-                <li>
+                <li className="group__list">
                     <Link to="/comunidade/forum" id="forum">
                         <img src={Forum} />
                         <span>Fórum</span>
                     </Link>
                 </li>
-                <li>
+                <li className="group__list">
                     <Link to="/comunidade/academy" id="academy">
                         <img src={Academy} />
                         <span>Academy</span>
                     </Link>
                 </li>
-                <li>
-                    <details>
-                        <summary>
+                <li className="group__list">
+                    <details className="list__details">
+                        <summary className="details__summary">
                             <img src={Eventos} />
-                            <span>Eventos</span>
+                            <div className="summary__text">
+                                <span>Eventos</span>
+                                <FaAngleRight color={"#4B4D6E"}/>
+                            </div>
                         </summary>
-                        <div>
+                        <div className="details__links">
                             <Link
                                 to="/comunidade/eventos:evento_1"
                                 id="eventos:evento_1"
@@ -59,13 +64,13 @@ const Comunidade = () => {
                         </div>
                     </details>
                 </li>
-                <li>
+                <li className="group__list">
                     <Link to="/comunidade/noticias" id="noticias">
                         <img src={Noticias} />
                         <span>Notícias</span>
                     </Link>
                 </li>
-                <li>
+                <li className="group__list">
                     <Link to="/comunidade/servicos" id="servicos">
                         <img src={Servicos} />
                         <span>Serviços</span>
