@@ -5,6 +5,8 @@ import Chat from "../../../assets/icons/chat.svg"
 import Proventos from "../../../assets/icons/proventos.svg"
 import Indicacoes from "../../../assets/icons/indicacoes.svg"
 
+import { FaAngleRight } from "react-icons/fa"
+
 import { Link } from "react-router-dom"
 
 const Empreendedor = () => {
@@ -14,25 +16,28 @@ const Empreendedor = () => {
             <span>ÁREA DO EMPREGADOR</span>
 
             <ul>
-                <li>
+                <li className="group__list">
                     <Link to="/empregador/dashboard" id="dashboard">
                         <img src={Dashboard} />
                         <span>Dashboard</span>
                     </Link>
                 </li>
-                <li>
+                <li className="group__list">
                     <Link to="/empregador/empresas" id="empresas">
                         <img src={Empresas} />
                         <span>Empresas</span>
                     </Link>
                 </li>
-                <li>
-                    <details>
-                        <summary>
+                <li className="group__list">
+                    <details className="list__details">
+                        <summary className="details__summary">
                             <img src={Projetos} />
-                            <span>Projetos</span>
+                            <div className="summary__text">
+                                <span>Projetos</span>
+                                <FaAngleRight color={"#4B4D6E"}/>
+                            </div>
                         </summary>
-                        <div>
+                        <div className="details__links">
                             <Link
                                 to="/empregador/projetos:projeto_1"
                                 id="projetos:projeto_1"
@@ -60,19 +65,19 @@ const Empreendedor = () => {
                         </div>
                     </details>
                 </li>
-                <li>
+                <li className="group__list">
                     <Link to="/empregador/chat" id="chat">
                         <img src={Chat} />
                         <span>Chat</span>
                     </Link>
                 </li>
-                <li>
+                <li className="group__list">
                     <Link to="/empregador/proventos" id="proventos">
                         <img src={Proventos} />
                         <span>Proventos</span>
                     </Link>
                 </li>
-                <li>
+                <li className="group__list">
                     <Link to="/empregador/indicacoes" id="indicacoes">
                         <img src={Indicacoes} />
                         <span>Indicações</span>
