@@ -38,7 +38,7 @@ const Home = () => {
     return (
         <div className="pageContent">
             <Aside />
-            <div className="pageContent__main" style={{ margin: "0px 0px 0px 230px" }}>
+            <div className="pageContent__main">
 
                 <Header PageName={"Home"} />
                 <main>
