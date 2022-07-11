@@ -43,14 +43,9 @@ const Aside = () => {
     const changeAsideWidth = (e) => {
         const aside = e.parentElement.parentElement
         aside.classList.toggle("closed")
-
+        
         const mainContent = document.querySelector(".pageContent__main")
-        if (aside.classList.contains("closed")) {
-            mainContent.style.margin = "0px 0px 0px 45px"
-        } else {
-            mainContent.style.margin = "0px 0px 0px 230px"
-
-        }
+        mainContent.classList.toggle("asideClosed")
     }
 
     return (

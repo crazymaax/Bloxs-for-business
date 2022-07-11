@@ -10,12 +10,13 @@ const Servicos = () => {
         <>
             <div className="pageContent">
                 <Aside />
-                <div className="pageContent__main" style={{margin: "0px 0px 0px 230px"}}>
-
-                    <Header PageName={"Serviços"} />
-                    <main>
-                        <EmConstrucao slug={slug}/>
-                    </main>
+                <div className="pageContent__main">
+                    <div>
+                        <Header PageName={"Serviços"} />
+                        <main>
+                            <EmConstrucao slug={slug} />
+                        </main>
+                    </div>
                 </div>
             </div>
         </>
