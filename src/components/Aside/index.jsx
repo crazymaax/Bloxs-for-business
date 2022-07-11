@@ -43,7 +43,7 @@ const Aside = () => {
     const changeAsideWidth = (e) => {
         const aside = e.parentElement.parentElement
         aside.classList.toggle("closed")
-        
+
         const mainContent = document.querySelector(".pageContent__main")
         mainContent.classList.toggle("asideClosed")
     }
@@ -68,17 +68,20 @@ const Aside = () => {
             </div>
 
             <nav className="aside__nav">
-                <li className="group__list">
-                    <Link to="/home">
-                        <img src={Home} id="home" />
-                        <span>Home</span>
-                    </Link>
-                </li>
-                <Empreendedor />
-                <Comunidade />
-            </nav>
+                <div>
 
-            <button className="aside__button">Submeter projeto</button>
+                    <li className="group__list">
+                        <Link to="/home">
+                            <img src={Home} id="home" />
+                            <span>Home</span>
+                        </Link>
+                    </li>
+                    <Empreendedor />
+                    <Comunidade />
+                </div>
+
+                <button className="aside__button">Submeter projeto</button>
+            </nav>
 
         </aside>
     )
