@@ -12,7 +12,7 @@ const Projetos = () => {
         <>
             <div className="pageContent">
                 <Aside />
-                <div className="pageContent__main">
+                <div className="pageContent__main" style={{margin: "0px 0px 0px 230px"}}>
 
                     <Header PageName={"Projetos"} />
                     <main>

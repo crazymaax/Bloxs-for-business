@@ -70,7 +70,7 @@
 
             span, svg {
                 transition: all 0.5s;
-                color: utilities.$aside-active-textcolor;
+                color: utilities.$aside-active-textcolor !important;
                 font-weight: 500;
             }
             
@@ -121,6 +121,7 @@
                         justify-content: space-between;
 
                         span {
+                            color: utilities.$aside-textcolor-1;
                             margin: 0;
                         }
 
@@ -181,7 +182,7 @@
 }
 
 .closed {
-    width: 45px;
+    width: 50px;
 
     img:nth-child(2) {
         transform: rotate(180deg);

@@ -73,7 +73,7 @@ const Aside = () => {
             </div>
 
             <nav className="aside__nav">
-                <li>
+                <li className="group__list">
                     <Link to="/home">
                         <img src={Home} id="home" />
                         <span>Home</span>
