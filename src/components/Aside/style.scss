@@ -2,7 +2,8 @@
 
 .mainContent__aside {
     height: 100vh;
-    width: 230px;
+    width: 210px;
+    min-height: -webkit-fill-available;
     background-color: utilities.$aside-background-color-1;
 
     display: flex;
@@ -17,6 +18,10 @@
     }
 
     transition: width 1s ease-in-out;
+
+    @media screen and (min-width: 768px) {
+        width: 230px;
+    }
 }
 
 .aside__header {
@@ -49,13 +54,16 @@
 }
 
 .aside__nav {
+    height: 100%;
     font-size: 1rem;
-    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     a {
         display: flex;
         align-items: center;
-        font-size: 13px;
+        font-size: 18px;
         margin-left: 15px;
     }
 
@@ -70,10 +78,10 @@
 
             span, svg {
                 transition: all 0.5s;
-                color: utilities.$aside-active-textcolor !important;
+                color: utilities.$aside-active-textcolor  !important;
                 font-weight: 500;
             }
-            
+
             svg {
                 fill: utilities.$aside-active-textcolor;
             }
@@ -101,7 +109,7 @@
 
             .list__details {
                 display: flex;
-                font-size: 13px;
+                font-size: 15px;
 
                 margin-left: 15px;
                 cursor: pointer;
@@ -156,12 +164,35 @@
             }
         }
     }
+
+    @media screen and (min-width: 768px) {
+
+        a {
+            font-size: 13px;
+        }
+        
+        .nav_group {
+            
+            span:first-child {
+                font-size: 13px;
+            }
+    
+            ul {
+
+                .list__details {
+                    font-size: 13px;    
+                }
+            }
+        }
+    }
 }
 
 .aside__button {
     @include utilities.button;
     width: 90%;
-    margin: 20px auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    align-self: center;
 }
 
 .activePage {
