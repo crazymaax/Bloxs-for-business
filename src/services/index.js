@@ -7,7 +7,7 @@ const instance = axios.create({
 
 const instanceUser = axios.create({
   // baseURL: "http://localhost:3001/", // PARA TESTES EM MÁQUINA LOCAL SEM ENVIAR PARA O SERVIDOR
-  baseURL: "https://bloxsapi.herokuapp.com/",
+  baseURL: "https://bloxsapi.herokuapp.com/", // https://github.com/crazymaax/Bloxsapi
 });
 
 const firebaseConfig = {
