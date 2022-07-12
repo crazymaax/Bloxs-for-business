@@ -22,3 +22,8 @@
 .asideClosed {
   margin-left: 45px;
 }
+
+.Toastify__toast {
+  background-color: utilities.$aside-background-color-2 !important;
+  color: utilities.$aside-active-textcolor !important;
+}
