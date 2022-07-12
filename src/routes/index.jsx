@@ -13,6 +13,7 @@ import Noticias from "../pages/Comunidade/Noticias"
 import Servicos from "../pages/Comunidade/Servicos";
 import Forum from "../pages/Comunidade/Forum";
 import Indicacoes from "../pages/Empregador/Indicacoes";
+import Register from "../pages/Register";
 
 const Routes = () => {
 
@@ -20,6 +21,7 @@ const Routes = () => {
         <Switch>
             <Route exact path="/" component={Login} />
             <Route exact path="/home" component={Home} />
+            <Route exact path="/register" component={Register} />
 
             <Route exact path="/empregador/dashboard" component={Dashboard} />
             <Route exact path="/empregador/empresas" component={Empresas} />
