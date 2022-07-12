@@ -12,7 +12,7 @@ const Chat = () => {
                 <Aside />
                 <div className="pageContent__main">
                     <div>
-                        <Header PageName={"Serviços"} />
+                        <Header PageName={"Chat"} />
                         <main>
                             <EmConstrucao slug={slug} />
                         </main>

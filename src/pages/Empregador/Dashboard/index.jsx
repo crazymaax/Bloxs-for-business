@@ -12,7 +12,7 @@ const Dashboard = () => {
                 <Aside />
                 <div className="pageContent__main">
                     <div>
-                        <Header PageName={"Serviços"} />
+                        <Header PageName={"Dashboard"} />
                         <main>
                             <EmConstrucao slug={slug} />
                         </main>
