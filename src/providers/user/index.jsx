@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 import userBlank from "../../assets/icons/user-blank.png"
 
-import { loginWithGoogle } from "../../services/user";
+import { loginUser, loginWithGoogle, signUpUser } from "../../services/user";
 
 import { v4 as uuidv4 } from 'uuid';
 import { toast } from "react-toastify";
@@ -54,7 +54,7 @@ export const UserProvider = ({ children }) => {
     data.avatar = userBlank
 
     const signup = await signUpUser(data)
-
+    
     if (signup) {      
       toast.success("Cadastrado com sucesso")
 
@@ -68,13 +68,29 @@ export const UserProvider = ({ children }) => {
     }
   }
 
+  const handleLogin = async (data) => {
+    const login = await loginUser(data)
+
+    if (login) {
+      toast.success(`Bem-vindo a Bloxs Investimentos ${login.name}`)
+
+      setTimeout(() => {
+
+        setUser(login)
+        localStorage.setItem("@Bloxs:user", JSON.stringify(login))
+
+      }, 2000)
+    }
+  }
+
   return (
     <UserContext.Provider
       value={{
         user,
         setUser,
         handleGoogleLogin,
-        handleSignup
+        handleSignup,
+        handleLogin
       }}
     >
       {children}
