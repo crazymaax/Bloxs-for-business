@@ -15,14 +15,14 @@ const Comunidade = () => {
             <span>COMUNIDADE</span>
 
             <ul>
-                <li className="group__list">
-                    <Link to="/comunidade/forum" id="forum">
+                <li className="group__list" id="forum">
+                    <Link to="/comunidade/forum" >
                         <img src={Forum} />
                         <span>Fórum</span>
                     </Link>
                 </li>
-                <li className="group__list">
-                    <Link to="/comunidade/academy" id="academy">
+                <li className="group__list" id="academy">
+                    <Link to="/comunidade/academy" >
                         <img src={Academy} />
                         <span>Academy</span>
                     </Link>
@@ -33,7 +33,7 @@ const Comunidade = () => {
                             <img src={Eventos} />
                             <div className="summary__text">
                                 <span>Eventos</span>
-                                <FaAngleRight color={"#4B4D6E"}/>
+                                <FaAngleRight color={"#4B4D6E"} />
                             </div>
                         </summary>
                         <div className="details__links">
@@ -64,14 +64,14 @@ const Comunidade = () => {
                         </div>
                     </details>
                 </li>
-                <li className="group__list">
-                    <Link to="/comunidade/noticias" id="noticias">
+                <li className="group__list" id="noticias">
+                    <Link to="/comunidade/noticias" >
                         <img src={Noticias} />
                         <span>Notícias</span>
                     </Link>
                 </li>
-                <li className="group__list">
-                    <Link to="/comunidade/servicos" id="servicos">
+                <li className="group__list" id="servicos">
+                    <Link to="/comunidade/servicos" >
                         <img src={Servicos} />
                         <span>Serviços</span>
                     </Link>

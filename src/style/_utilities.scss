@@ -90,3 +90,18 @@ $main-date-color: #7F8299;
         width: 50%;
     }
 }
+
+@mixin activePage {
+    background-color: $aside-background-color-2;
+
+    img {
+        filter: brightness(0) saturate(100%) invert(30%) sepia(16%) saturate(7490%) hue-rotate(185deg) brightness(92%) contrast(98%); // Equivalente a utilities.$aside-secondary-color
+    }
+}
+
+@mixin spanActivePage {
+    span {
+        color: $aside-active-textcolor  !important;
+        font-weight: 500;
+    }
+}

@@ -16,14 +16,14 @@ const Empreendedor = () => {
             <span>ÁREA DO EMPREGADOR</span>
 
             <ul>
-                <li className="group__list">
-                    <Link to="/empregador/dashboard" id="dashboard">
+                <li className="group__list" id="dashboard">
+                    <Link to="/empregador/dashboard" >
                         <img src={Dashboard} />
                         <span>Dashboard</span>
                     </Link>
                 </li>
-                <li className="group__list">
-                    <Link to="/empregador/empresas" id="empresas">
+                <li className="group__list" id="empresas">
+                    <Link to="/empregador/empresas" >
                         <img src={Empresas} />
                         <span>Empresas</span>
                     </Link>
@@ -65,20 +65,20 @@ const Empreendedor = () => {
                         </div>
                     </details>
                 </li>
-                <li className="group__list">
-                    <Link to="/empregador/chat" id="chat">
+                <li className="group__list" id="chat">
+                    <Link to="/empregador/chat" >
                         <img src={Chat} />
                         <span>Chat</span>
                     </Link>
                 </li>
-                <li className="group__list">
-                    <Link to="/empregador/proventos" id="proventos">
+                <li className="group__list" id="proventos">
+                    <Link to="/empregador/proventos" >
                         <img src={Proventos} />
                         <span>Proventos</span>
                     </Link>
                 </li>
-                <li className="group__list">
-                    <Link to="/empregador/indicacoes" id="indicacoes">
+                <li className="group__list" id="indicacoes">
+                    <Link to="/empregador/indicacoes" >
                         <img src={Indicacoes} />
                         <span>Indicações</span>
                     </Link>

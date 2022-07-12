@@ -196,20 +196,20 @@
 }
 
 .activePage {
+    @include utilities.activePage;
+    @include utilities.spanActivePage;
+}
 
-    span {
-        color: utilities.$aside-active-textcolor  !important;
-        font-weight: 500;
+.activePageDetails {
+    @include utilities.activePage;
+    
+    .summary__text {
+        @include utilities.spanActivePage;
     }
-
-    img {
-        filter: brightness(0) saturate(100%) invert(30%) sepia(16%) saturate(7490%) hue-rotate(185deg) brightness(92%) contrast(98%); // Equivalente a utilities.$aside-secondary-color
-    }
-
+    
     svg {
         fill: utilities.$aside-active-textcolor
     }
-
 }
 
 .closed {
