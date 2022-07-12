@@ -14,7 +14,7 @@ const Home = () => {
 
     const { user } = useAuth()
     const history = useHistory()
-    const { energyNews, agroNews, energyPage, agroPage, listNews } = useNews()
+    const { listNews, news } = useNews()
 
     if (!user) {
         history.push("/")
@@ -24,16 +24,9 @@ const Home = () => {
 
     useEffect(() => {
 
-        const fetchData = async () => {
+        listNews(1)
 
-            listNews("Energia", energyPage)
-
-            listNews("Agronegócio", agroPage)
-
-        }
-
-        fetchData()
-    }, [energyPage, agroPage])
+    }, [])
 
     return (
         <div className="pageContent">
@@ -58,26 +51,30 @@ const Home = () => {
                             <p>Fique por dentro de todas as novidades do mercado.</p>
 
                             <div className="card__homeNews">
-                                {energyNews.slice(0, 1).map((item) => {
-                                    const { id } = item
-                                    return (
-                                        <div className="homeNews__newsContainer">
-                                            <span>Energia</span>
-                                            <Noticia noticia={item} key={id} />
-                                        </div>
-                                    )
+                                {news && (
+                                    <>
+                                        {news.energy.news.slice(0, 1).map((item) => {
+                                            const { id } = item
+                                            return (
+                                                <div className="homeNews__newsContainer" key={id}>
+                                                    <span>Energia</span>
+                                                    <Noticia noticia={item} />
+                                                </div>
+                                            )
 
-                                })}
-                                {agroNews.slice(0, 1).map((item) => {
-                                    const { id } = item
-                                    return (
-                                        <div className="homeNews__newsContainer">
-                                            <span>Agronegócio</span>
-                                            <Noticia noticia={item} key={id} />
-                                        </div>
-                                    )
+                                        })}
+                                        {news.agro.news.slice(0, 1).map((item) => {
+                                            const { id } = item
+                                            return (
+                                                <div className="homeNews__newsContainer" key={id}>
+                                                    <span>Agronegócio</span>
+                                                    <Noticia noticia={item} />
+                                                </div>
+                                            )
 
-                                })}
+                                        })}
+                                    </>
+                                )}
                             </div>
 
                             <Link to="/comunidade/noticias" className="card__button">Acessar</Link>
@@ -85,7 +82,6 @@ const Home = () => {
                         <div className="home__card">
                             <h2>Indicações</h2>
                             <p>Cadastre investidores para suas operações e ganhe por cada indicação.</p>
-
                             <Link to="/empregador/indicacoes" className="card__button">Cadastrar</Link>
                         </div>
                     </div>
