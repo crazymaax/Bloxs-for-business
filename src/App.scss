@@ -2,6 +2,17 @@
 
 .pageContent {
   display: flex;
+  
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: utilities.$aside-background-color-2;
+  border-radius: 8px;
+  border: 1px solid white;
 }
 
 .pageContent__main {
