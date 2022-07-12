@@ -100,4 +100,12 @@
 
         cursor: pointer;
     }
+
+    a {
+        color:utilities.$login-text-color-2;
+        &:hover {
+            color:utilities.$login-hover-color;
+            font-weight: 600;
+        }
+    }
 }
