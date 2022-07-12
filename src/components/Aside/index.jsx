@@ -29,9 +29,9 @@ const Aside = () => {
                 }
             }
 
-            if (listParent.parentElement.matches("details")) { //  Verifica se o pai é <details> e aplica a classe em <summary>
+            if (listParent.parentElement.matches("details")) { // Verifica se o pai é <details> e aplica a classe em <li>
 
-                listParent.parentElement.children[0].classList.add("activePage")
+                listParent.parentElement.parentElement.classList.add("activePageDetails") // li
             }
 
             activeAnchor.classList.add("activePage")
@@ -70,9 +70,9 @@ const Aside = () => {
             <nav className="aside__nav">
                 <div>
 
-                    <li className="group__list">
-                        <Link to="/home">
-                            <img src={Home} id="home" />
+                    <li className="group__list" id="home">
+                        <Link to="/home" >
+                            <img src={Home} />
                             <span>Home</span>
                         </Link>
                     </li>
