@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "./style.scss"
 
-import { FaHandPointer, FaChartLine, FaShieldAlt, FaHandHoldingUsd } from "react-icons/fa"
+import BloxsLogo from "../../assets/loginLogo.svg"
 
 import { Link, useHistory } from "react-router-dom"
 
@@ -22,39 +22,14 @@ const Login = () => {
     return (
         <div className="loginContainer">
             <div className="loginContainer__info">
-                <Link to="/" className="info__header">
-                    <img src="https://bloxs.com.br/static/images/logo/logo-white.svg" alt="" />
-                </Link>
+                <div>
 
-                <h1>
-                    Dê o primeiro passo. <span>Diversifique</span> como os grandes
-                </h1>
+                    <img src={BloxsLogo} alt="Logo da Bloxs" title="Logo da Bloxs" />
 
-                <div className="info_boxesContainer">
-                    <div className="boxesContainer__smallBox">
-                        <FaHandPointer />
-                        <p>
-                            Mais de <span>70 projetos da economia real</span>, criteriosamente selecionados para investimento
-                        </p>
-                    </div>
-                    <div className="boxesContainer__smallBox">
-                        <FaChartLine />
-                        <p>
-                            Projetos com alta rentabilidade, taxa zero e <span>baixa correlação</span> com a bolsa de valores
-                        </p>
-                    </div>
-                    <div className="boxesContainer__smallBox">
-                        <FaShieldAlt />
-                        <p>
-                            Segurança de um mercado <span>regulado pela ICVM 588 de 2017</span>
-                        </p>
-                    </div>
-                    <div className="boxesContainer__smallBox">
-                        <FaHandHoldingUsd />
-                        <p>
-                            Mais de <span>100 milhões captados</span> e 100% dos relatórios em dia
-                        </p>
-                    </div>
+                    <h1>
+                        Tenha acesso a <span>investimentos alternativos de qualidade.</span> Totalmente online e com segurança.
+                    </h1>
+
                 </div>
             </div>
 
