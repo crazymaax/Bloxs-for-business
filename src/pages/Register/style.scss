@@ -1,6 +1,6 @@
 @use "../../style/utilities";
 
-.loginContainer {
+.registerContainer {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -12,11 +12,11 @@
     }
 }
 
-.loginContainer__info {
+.registerContainer__info {
     @include utilities.loginNRegisterContainer;
 
     color: utilities.$main-background-color-2;
-    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url("src/assets/loginImage.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url("src/assets/registerImage.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -62,12 +62,13 @@
 
 }
 
-.loginContainer__form {
+.registerContainer__form {
     @include utilities.loginNRegisterContainer;
 
     display: flex;
     flex-direction: column;
     gap: 20px;
+    overflow-y: scroll;
 
     h2 {
         font-size: 34px;
@@ -108,4 +109,9 @@
             font-weight: 600;
         }
     }
+}
+
+.form__error {
+    margin: 0 !important;
+    color: red;
 }
