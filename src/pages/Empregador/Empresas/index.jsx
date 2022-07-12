@@ -12,7 +12,7 @@ const Empresas = () => {
                 <Aside />
                 <div className="pageContent__main">
                     <div>
-                        <Header PageName={"Serviços"} />
+                        <Header PageName={"Empresas"} />
                         <main>
                             <EmConstrucao slug={slug} />
                         </main>

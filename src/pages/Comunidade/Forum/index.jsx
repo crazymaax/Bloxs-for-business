@@ -12,7 +12,7 @@ const Forum = () => {
                 <Aside />
                 <div className="pageContent__main">
                     <div>
-                        <Header PageName={"Serviços"} />
+                        <Header PageName={"Fórum"} />
                         <main>
                             <EmConstrucao slug={slug} />
                         </main>
