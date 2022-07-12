@@ -22,28 +22,19 @@ export const UserProvider = ({ children }) => {
     if (result.user) {
       const { uid, displayName, photoURL, email } = result.user
 
-      let newUser = {
+      let user = {
         id: uid,
-        avatar: userBlank,
-        name: "Usuário do Google",
+        avatar: photoURL,
+        name: displayName,
         email: email
       }
-
-      if (!displayName) {
-        newUser.avatar = photoURL
-        setUser(newUser)
-
-      } else if (!photoURL) {
-        newUser.name = displayName
-        setUser(newUser)
-
-      } else {
-        newUser.avatar = photoURL
-        newUser.name = displayName
-        setUser(newUser)
-      }
-
-      localStorage.setItem("@Bloxs:user", JSON.stringify(newUser))
+      
+      toast.success(`Bem-vindo a Bloxs Investimentos ${displayName}`)
+      setTimeout(() => {
+        
+        setUser(user)
+        localStorage.setItem("@Bloxs:user", JSON.stringify(user))
+      }, 2000)
     }
   }
 
