@@ -23,11 +23,11 @@ $main-title-color: #000000;
 $main-date-color: #7F8299;
 
 @mixin pageContainer {
-    padding: 40px;
+    padding: 20px;
     background-color: $main-background-color-2;
     border-radius: 10px;
     color: $main-text-color;
-
+    
     h2 {
         color: $main-title-color;
         font-size: 22px;
@@ -35,6 +35,11 @@ $main-date-color: #7F8299;
         padding-bottom: 15px;
         border-bottom: 1px dashed $main-date-color;
         margin-bottom: 25px;
+    }
+    
+    @media screen and (min-width: 768px) {
+        padding: 40px;
+        
     }
 
 }
