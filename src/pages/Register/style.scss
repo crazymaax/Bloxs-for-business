@@ -3,7 +3,7 @@
 .registerContainer {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
     
     @media screen and (min-width: 768px) {
         height: 100vh;
