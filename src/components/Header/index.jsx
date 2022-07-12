@@ -60,7 +60,12 @@ const Header = ({ PageName }) => {
 
                 <span>{name}</span>
                 <div className="user__image" >
-                    <img src={avatar} alt={name} />
+                    <img
+                        src={avatar}
+                        alt={name}
+                        onError={(e) => { // Login Google as vezes retorna 403 para a imagem, portantno usa-se onError para colocar a imagem padrão.
+                            e.target.src= "/src/assets/icons/user-blank.png"
+                        }} />
                 </div>
 
             </div>
