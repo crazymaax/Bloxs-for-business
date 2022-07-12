@@ -11,7 +11,7 @@ $aside-icon-color: #414368;
 /* Variáveis para Login e Register*/
 
 $login-text-color: #FFFFFF;
-$login-text-color-2: #FFC707;
+$login-text-color-2: #0267B0;
 
 
 /* Variáveis para Main */
@@ -40,6 +40,7 @@ $main-date-color: #7F8299;
 
 @mixin anchorHoverColor {
     padding: 5px 0;
+
     &:hover {
         background-color: $aside-background-color-2;
     }
@@ -47,6 +48,7 @@ $main-date-color: #7F8299;
     a {
         color: $aside-textcolor-1;
         transition: all 0.5s;
+
         &:hover {
             color: $aside-active-textcolor;
             font-weight: 500;
@@ -74,5 +76,16 @@ $main-date-color: #7F8299;
 
     &:hover {
         background: linear-gradient(#084fb9 31%, #0068b0 91.25%);
+    }
+}
+
+@mixin loginNRegisterContainer {
+    height: 100%;
+    padding: 28px;
+    
+    @media screen and (min-width: 768px) {
+        padding: 56px;
+        padding-top: 100px;
+        width: 50%;
     }
 }

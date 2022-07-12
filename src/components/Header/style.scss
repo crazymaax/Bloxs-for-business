@@ -19,11 +19,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     h1 {
         color: utilities.$main-text-color;
         font-size: 20px;
         font-weight: 800;
-        margin-left: 30px;
+        margin-left: 20px;
     }
     
 }
@@ -32,6 +33,18 @@
     display: flex;
     align-items: center;
     gap:10px;
+
+    span {
+        display: none;
+
+    }
+
+        @media screen and (min-width: 768px) {
+    
+            span {   
+                display: block;
+            }
+        }
 }
 
 .user__notification {
@@ -55,10 +68,18 @@
 .user__image {
     
     img {
-        width: 80px;
+        width: 40px;
         border-radius: 8px;
         margin: 5px;
+        margin-right: 20px; // Alinhar com o conteúdo da página
         
+    }
+
+    @media screen and (min-width: 768px) {
+    
+        img {   
+            width: 80px;
+        }
     }
 }
 
@@ -87,6 +108,7 @@
         background-color: utilities.$aside-background-color-2;
         color: utilities.$aside-active-textcolor;
         font-weight: 600;
+        cursor: pointer;
 
         &:hover {
             svg {
@@ -95,8 +117,5 @@
                 
             }
         }
-
-        cursor: pointer;
-        
     }
 }

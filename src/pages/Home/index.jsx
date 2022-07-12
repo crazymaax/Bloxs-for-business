@@ -38,7 +38,7 @@ const Home = () => {
     return (
         <div className="pageContent">
             <Aside />
-            <div className="pageContent__main" style={{ margin: "0px 0px 0px 230px" }}>
+            <div className="pageContent__main">
 
                 <Header PageName={"Home"} />
                 <main>
@@ -83,10 +83,10 @@ const Home = () => {
                             <Link to="/comunidade/noticias" className="card__button">Acessar</Link>
                         </div>
                         <div className="home__card">
-                            <h2>Eventos</h2>
-                            <p>Não perca nenhum evento programado.</p>
+                            <h2>Indicações</h2>
+                            <p>Cadastre investidores para suas operações e ganhe por cada indicação.</p>
 
-                            <Link to="/comunidade/eventos" className="card__button">Acompanhar</Link>
+                            <Link to="/empregador/indicacoes" className="card__button">Cadastrar</Link>
                         </div>
                     </div>
                 </main>

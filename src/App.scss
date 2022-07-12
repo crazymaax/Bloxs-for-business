@@ -2,15 +2,23 @@
 
 .pageContent {
   display: flex;
-  width: 100%;
 }
 
 .pageContent__main {
   width: 100%;
+  margin-left: 210px;
   transition: margin 1s ease-in-out;
-  
+
   main {
     padding: 20px;
     background-color: utilities.$main-background-color;
   }
+  
+  @media screen and (min-width: 768px) {
+    margin-left: 230px;
+  }
+}
+
+.asideClosed {
+  margin-left: 45px;
 }

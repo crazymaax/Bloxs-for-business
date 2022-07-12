@@ -45,12 +45,7 @@ const Aside = () => {
         aside.classList.toggle("closed")
 
         const mainContent = document.querySelector(".pageContent__main")
-        if (aside.classList.contains("closed")) {
-            mainContent.style.margin = "0px 0px 0px 45px"
-        } else {
-            mainContent.style.margin = "0px 0px 0px 230px"
-
-        }
+        mainContent.classList.toggle("asideClosed")
     }
 
     return (
@@ -73,17 +68,20 @@ const Aside = () => {
             </div>
 
             <nav className="aside__nav">
-                <li className="group__list">
-                    <Link to="/home">
-                        <img src={Home} id="home" />
-                        <span>Home</span>
-                    </Link>
-                </li>
-                <Empreendedor />
-                <Comunidade />
-            </nav>
+                <div>
 
-            <button className="aside__button">Submeter projeto</button>
+                    <li className="group__list">
+                        <Link to="/home">
+                            <img src={Home} id="home" />
+                            <span>Home</span>
+                        </Link>
+                    </li>
+                    <Empreendedor />
+                    <Comunidade />
+                </div>
+
+                <button className="aside__button">Submeter projeto</button>
+            </nav>
 
         </aside>
     )
