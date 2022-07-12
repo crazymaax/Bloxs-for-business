@@ -8,65 +8,62 @@ import Noticia from "../Noticia"
 
 const Categoria = () => {
 
-    const { energyNews, agroNews, energyMaxPage, energyPage, agroMaxPage, agroPage, listNews, handleNextPage } = useNews()
+    const { news, listNews, handleNextPage } = useNews()
 
     useEffect(() => {
 
-        const fetchData = async () => {
+        listNews(1)
 
-            listNews("Energia", energyPage)
-
-            listNews("Agronegócio", agroPage)
-
-        }
-
-        fetchData()
-    }, [energyPage, agroPage])
+    }, [])
 
     return (
         <div className="main__category">
+            {news && (
+                <>
+                    <h2>Energia</h2>
 
-            <h2>Energia</h2>
+                    <div className="category__container">
+                        <div className="category__list">
+                            <div className="list_arrowLeft" onClick={() => handleNextPage(news.energy.currentPage - 1, "energy")}>
+                                <FaAngleLeft size={30} color={"#9293A6"} />
+                            </div>
 
-            <div className="category__container">
-                <div className="category__list">
-                    <div className="list_arrowLeft" id={energyPage} onClick={() => handleNextPage(energyPage, "Energia", false)}>
-                        <FaAngleLeft size={30} color={"#9293A6"} />
+                            {news.energy.news.map((item) => {
+                                const { id } = item
+                                return <Noticia noticia={item} key={id} />
+
+                            })}
+
+
+                            <div className="list_arrowRight" onClick={() => handleNextPage(news.energy.currentPage + 1, "energy")}>
+                                <FaAngleRight size={30} color={"#9293A6"} />
+                            </div>
+                        </div>
+                        <span className="list__pagination">{news.energy.currentPage} / {news.energy.maxPage}</span>
                     </div>
 
-                    {energyNews.map((item) => {
-                        const { id } = item
-                        return <Noticia noticia={item} key={id} />
+                    <h2>Agronegócio</h2>
 
-                    })}
+                    <div className="category__container">
+                        <div className="category__list">
+                            <div className="list_arrowLeft" onClick={() => handleNextPage(news.agro.currentPage - 1, "agro")}>
+                                <FaAngleLeft size={30} color={"#9293A6"} />
+                            </div>
 
-                    <div className="list_arrowRight" id={energyPage} onClick={() => handleNextPage(energyPage, "Energia", true)}>
-                        <FaAngleRight size={30} color={"#9293A6"} />
+                            {news.agro.news.map((item) => {
+                                const { id } = item
+                                return <Noticia noticia={item} key={id} />
+
+                            })}
+
+                            <div className="list_arrowRight" onClick={() => handleNextPage(news.agro.currentPage + 1, "agro")}>
+                                <FaAngleRight size={30} color={"#9293A6"} />
+                            </div>
+                        </div>
+                        <span className="list__pagination">{news.agro.currentPage} / {news.agro.maxPage}</span>
                     </div>
-                </div>
-                <span className="list__pagination">{energyPage} / {energyMaxPage}</span>
-            </div>
-
-            <h2>Agronegócio</h2>
-
-            <div className="category__container">
-                <div className="category__list">
-                    <div className="list_arrowLeft" id={agroPage} onClick={() => handleNextPage(agroPage, "Agronegócio", false)}>
-                        <FaAngleLeft size={30} color={"#9293A6"} />
-                    </div>
-
-                    {agroNews.map((item) => {
-                        const { id } = item
-                        return <Noticia noticia={item} key={id} />
-
-                    })}
-
-                    <div className="list_arrowRight" id={agroPage} onClick={() => handleNextPage(agroPage, "Agronegócio", true)}>
-                        <FaAngleRight size={30} color={"#9293A6"} />
-                    </div>
-                </div>
-                <span className="list__pagination">{agroPage} / {agroMaxPage}</span>
-            </div>
+                </>
+            )}
         </div>
 
     )
