@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<title>empresas-svg</title>
+	<style>
+		.s0 { fill: none } 
+		.s1 { fill: #414368 } 
+		.s2 { opacity: .3;fill: #414368 } 
+	</style>
+	<g id="Layer">
+		<path id="Layer" class="s0" d="m0 0h24v24h-24z"/>
+		<path id="Layer" fill-rule="evenodd" class="s1" d="m13.5 21v-3c0-0.6-0.4-1-1-1h-1c-0.6 0-1 0.4-1 1v3h-5.5v-17c0-1.1 0.9-2 2-2h10c1.1 0 2 0.9 2 2v17zm-4.5-17c-0.6 0-1 0.4-1 1v1c0 0.6 0.4 1 1 1h1c0.6 0 1-0.4 1-1v-1c0-0.6-0.4-1-1-1zm5 0c-0.6 0-1 0.4-1 1v1c0 0.6 0.4 1 1 1h1c0.6 0 1-0.4 1-1v-1c0-0.6-0.4-1-1-1zm-5 4c-0.6 0-1 0.4-1 1v1c0 0.6 0.4 1 1 1h1c0.6 0 1-0.4 1-1v-1c0-0.6-0.4-1-1-1zm0 4c-0.6 0-1 0.4-1 1v1c0 0.6 0.4 1 1 1h1c0.6 0 1-0.4 1-1v-1c0-0.6-0.4-1-1-1zm5 0c-0.6 0-1 0.4-1 1v1c0 0.6 0.4 1 1 1h1c0.6 0 1-0.4 1-1v-1c0-0.6-0.4-1-1-1z"/>
+		<path id="Layer" class="s1" d="m13 9c0-0.6 0.4-1 1-1h1c0.6 0 1 0.4 1 1v1c0 0.6-0.4 1-1 1h-1c-0.6 0-1-0.4-1-1z"/>
+		<path id="Layer" fill-rule="evenodd" class="s2" d="m4 21h16c0.6 0 1 0.4 1 1v0.4c0 0.3-0.3 0.6-0.6 0.6h-16.8c-0.3 0-0.6-0.3-0.6-0.6v-0.4c0-0.6 0.4-1 1-1z"/>
+	</g>
+</svg>

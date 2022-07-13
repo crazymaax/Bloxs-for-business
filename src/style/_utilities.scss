@@ -1,0 +1,112 @@
+/* Variáveis para Aside */
+
+$aside-background-color-1: #1E1E2D;
+$aside-background-color-2: #1A1A27;
+$aside-secondary-color: #0267B0;
+$aside-textcolor-1: #9293A6;
+$aside-textcolor-2: #4B4D6E;
+$aside-active-textcolor: #FFFFFF;
+$aside-icon-color: #414368;
+
+/* Variáveis para Login e Register*/
+
+$login-text-color: #FFFFFF;
+$login-text-color-2: #0267B0;
+$login-hover-color: #02375c;
+
+
+/* Variáveis para Main */
+$main-background-color: #F4F7FA;
+$main-background-color-2: #FFFFFF;
+$main-text-color: #191C32;
+$main-title-color: #000000;
+$main-date-color: #7F8299;
+
+@mixin pageContainer {
+    padding: 20px;
+    background-color: $main-background-color-2;
+    border-radius: 10px;
+    color: $main-text-color;
+    
+    h2 {
+        color: $main-title-color;
+        font-size: 22px;
+        font-weight: 800;
+        padding-bottom: 15px;
+        border-bottom: 1px dashed $main-date-color;
+        margin-bottom: 25px;
+    }
+    
+    @media screen and (min-width: 768px) {
+        padding: 40px;
+        
+    }
+
+}
+
+@mixin anchorHoverColor {
+    padding: 5px 0;
+
+    &:hover {
+        background-color: $aside-background-color-2;
+    }
+
+    a {
+        color: $aside-textcolor-1;
+        transition: all 0.5s;
+
+        &:hover {
+            color: $aside-active-textcolor;
+            font-weight: 500;
+
+            img {
+                filter: brightness(0) saturate(100%) invert(30%) sepia(16%) saturate(7490%) hue-rotate(185deg) brightness(92%) contrast(98%); // Equivalente a utilities.$aside-secondary-color
+            }
+        }
+
+    }
+}
+
+@mixin button {
+    padding: 10px 20px;
+    width: fit-content;
+
+    background: linear-gradient(90deg, #084fb9 31%, #0068b0 91.25%);
+    border: transparent;
+    border-radius: 8px;
+    color: white;
+
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        background: linear-gradient(#084fb9 31%, #0068b0 91.25%);
+    }
+}
+
+@mixin loginNRegisterContainer {
+    height: 100%;
+    padding: 28px;
+    
+    @media screen and (min-width: 768px) {
+        padding: 56px;
+        padding-top: 100px;
+        width: 50%;
+    }
+}
+
+@mixin activePage {
+    background-color: $aside-background-color-2;
+
+    img {
+        filter: brightness(0) saturate(100%) invert(30%) sepia(16%) saturate(7490%) hue-rotate(185deg) brightness(92%) contrast(98%); // Equivalente a utilities.$aside-secondary-color
+    }
+}
+
+@mixin spanActivePage {
+    span {
+        color: $aside-active-textcolor  !important;
+        font-weight: 500;
+    }
+}

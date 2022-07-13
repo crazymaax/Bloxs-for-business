@@ -1,0 +1,39 @@
+@use "./style/utilities";
+
+.pageContent {
+  display: flex;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: utilities.$aside-background-color-2;
+  border-radius: 8px;
+  border: 1px solid white;
+}
+
+.pageContent__main {
+  width: 100%;
+  margin-left: 210px;
+  transition: margin 1s ease-in-out;
+
+  main {
+    padding: 20px;
+    background-color: utilities.$main-background-color;
+  }
+  
+  @media screen and (min-width: 768px) {
+    margin-left: 230px;
+  }
+}
+
+.asideClosed {
+  margin-left: 45px;
+}
+
+.Toastify__toast {
+  background-color: utilities.$aside-background-color-2 !important;
+  color: utilities.$aside-active-textcolor !important;
+}
