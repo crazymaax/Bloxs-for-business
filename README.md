@@ -18,7 +18,7 @@ Onde o usuário poderá se registrar e conectar com a conta.
 - Cadastrar investidores e controlar proventos.
 - Ficar por dentro das últimas notícias do mercado.
 - Ter registro e acompanhamento de eventos.
-- E muito mais, <a href="LINK DO VERSEL">acesse!</a>
+- E muito mais, <a href="https://bloxs-for-business.vercel.app/">acesse!</a>
 
 #
 
@@ -40,7 +40,7 @@ Onde o usuário poderá se registrar e conectar com a conta.
 
 ## 🌐 Como utilizar a aplicação
 
-Para acessar o site, basta clicar neste <a href="LINK DO VERSEL">Link</a>
+Para acessar o site, basta clicar neste <a href="https://bloxs-for-business.vercel.app/">Link</a>
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/95248203/178520676-5f81b46d-576e-49ea-a38a-8deca8495329.jpg" alt="Página de Login" title="Página de Login">
