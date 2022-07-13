@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import "./style.scss"
+import "./style.scss";
 
-import BloxsLogo from "../../assets/loginLogo.svg"
+import BloxsLogo from "../../assets/loginLogo.svg";
 
-import { Link, useHistory } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom";
 
 import { useAuth } from "../../providers/user";
 
@@ -14,12 +14,12 @@ import signUpSchema from "../../schemas/signup";
 
 const Register = () => {
 
-    const { user, handleSignup } = useAuth()
-    const history = useHistory()
+    const { user, handleSignup } = useAuth();
+    const history = useHistory();
 
     useEffect(() => {
         if (user) {
-            history.push("/home")
+            history.push("/home");
         }
     }, [user])
 
@@ -28,10 +28,9 @@ const Register = () => {
     });
 
     const onRegister = (data) => {
-        handleSignup(data)
+        handleSignup(data);
     };
 
-    console.log(errors)
     return (
         <div className="registerContainer">
 

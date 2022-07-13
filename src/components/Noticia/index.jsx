@@ -1,16 +1,16 @@
-import "./style.scss"
+import "./style.scss";
 
-import { useNews } from "../../providers/noticias"
+import { useNews } from "../../providers/noticias";
 
 const Noticia = ({ noticia }) => {
 
-    const { FormatDate } = useNews()
+    const { FormatDate } = useNews();
 
-    const { modified, title, link, yoast_head_json: { og_image } } = noticia
+    const { modified, title, link, yoast_head_json: { og_image } } = noticia;
 
-    const photoUrl = og_image[0].url
-    const itemTitle = title.rendered
-    const dateFormatted = FormatDate(modified)
+    const photoUrl = og_image[0].url;
+    const itemTitle = title.rendered;
+    const dateFormatted = FormatDate(modified);
 
     return (
         <a className="list__newContainer" href={link} target="_blank">
@@ -20,8 +20,7 @@ const Noticia = ({ noticia }) => {
                 <span>{dateFormatted}</span>
             </div>
         </a>
-
     )
 }
 
-export default Noticia
+export default Noticia;

@@ -26,7 +26,6 @@
         font-weight: 800;
         margin-left: 20px;
     }
-    
 }
 
 .header__user {
@@ -39,19 +38,17 @@
 
     }
 
-        @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) {
     
-            span {   
-                display: block;
-            }
+        span {   
+            display: block;
         }
+    }
 }
 
 .user__notification {
-    
     background-color: transparent;
     border: none;
-
 
     img {
         width: 20px;
@@ -66,7 +63,7 @@
 }
 
 .user__image {
-    
+
     img {
         width: 40px;
         border-radius: 8px;
@@ -114,7 +111,6 @@
             svg {
                 transition: all 0.5s;
                 filter: invert(88%) sepia(89%) saturate(3%) hue-rotate(262deg) brightness(110%) contrast(97%); // Equivalente a utilities.$aside-active-textcolor;
-                
             }
         }
     }

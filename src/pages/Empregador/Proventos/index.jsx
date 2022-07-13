@@ -4,7 +4,7 @@ import Header from "../../../components/Header";
 
 const Proventos = () => {
 
-    const slug = ":proventos" // Enquanto não possuir slug, foi definido um temporariamente.
+    const slug = ":proventos"; // Enquanto não possuir slug, foi definido um temporariamente.
 
     return (
         <>

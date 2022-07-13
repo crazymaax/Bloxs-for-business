@@ -170,17 +170,17 @@
         a {
             font-size: 13px;
         }
-        
+
         .nav_group {
-            
+
             span:first-child {
                 font-size: 13px;
             }
-    
+
             ul {
 
                 .list__details {
-                    font-size: 13px;    
+                    font-size: 13px;
                 }
             }
         }
@@ -202,11 +202,11 @@
 
 .activePageDetails {
     @include utilities.activePage;
-    
+
     .summary__text {
         @include utilities.spanActivePage;
     }
-    
+
     svg {
         fill: utilities.$aside-active-textcolor
     }
@@ -214,6 +214,7 @@
 
 .closed {
     width: 50px;
+    transition: width 1s ease-in-out;
 
     img:nth-child(2) {
         transform: rotate(180deg);
@@ -234,6 +235,4 @@
     button {
         display: none;
     }
-
-    transition: width 1s ease-in-out;
 }

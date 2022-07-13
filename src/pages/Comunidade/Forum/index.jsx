@@ -4,7 +4,7 @@ import Header from "../../../components/Header";
 
 const Forum = () => {
 
-    const slug = ":forum" // Enquanto não possuir slug, foi definido um temporariamente.
+    const slug = ":forum"; // Enquanto não possuir slug, foi definido um temporariamente.
 
     return (
         <>

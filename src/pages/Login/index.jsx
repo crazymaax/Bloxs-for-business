@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import "./style.scss"
+import "./style.scss";
 
-import BloxsLogo from "../../assets/loginLogo.svg"
+import BloxsLogo from "../../assets/loginLogo.svg";
 
-import { Link, useHistory } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom";
 
 import { useAuth } from "../../providers/user";
 
@@ -13,12 +13,12 @@ import loginSchema from "../../schemas/login";
 
 const Login = () => {
 
-    const { user, handleGoogleLogin, handleLogin } = useAuth()
-    const history = useHistory()
+    const { user, handleGoogleLogin, handleLogin } = useAuth();
+    const history = useHistory();
 
     useEffect(() => {
         if (user) {
-            history.push("/home")
+            history.push("/home");
         }
     }, [user])
 
@@ -27,7 +27,7 @@ const Login = () => {
     });
 
     const onRegister = (data) => {
-        handleLogin(data)
+        handleLogin(data);
     };
 
     return (

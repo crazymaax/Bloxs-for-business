@@ -4,7 +4,7 @@ import Header from "../../../components/Header";
 
 const Servicos = () => {
 
-    const slug = ":serviços" // Enquanto não possuir slug, foi definido um temporariamente.
+    const slug = ":serviços"; // Enquanto não possuir slug, foi definido um temporariamente.
 
     return (
         <>

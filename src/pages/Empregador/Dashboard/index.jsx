@@ -4,7 +4,7 @@ import Header from "../../../components/Header";
 
 const Dashboard = () => {
 
-    const slug = ":dashboard" // Enquanto não possuir slug, foi definido um temporariamente.
+    const slug = ":dashboard"; // Enquanto não possuir slug, foi definido um temporariamente.
 
     return (
         <>
