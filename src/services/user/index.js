@@ -40,7 +40,6 @@ export const signUpUser = async (data) => {
     return response;
 };
 
-
 export const loginWithGoogle = () => {
     const provider = new GoogleAuthProvider();
     const auth = getAuth();

@@ -1,11 +1,12 @@
-import { useParams } from "react-router-dom";
 import Aside from "../../../components/Aside";
 import EmConstrucao from "../../../components/EmConstrucao";
 import Header from "../../../components/Header";
 
+import { useParams } from "react-router-dom";
+
 const Eventos = () => {
 
-    const { slug } = useParams()
+    const { slug } = useParams();
 
     return (
         <>

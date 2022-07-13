@@ -3,34 +3,34 @@ import "./style.scss"
 
 import Bell from "../../assets/icons/bell.svg"
 
-import { FaUserAlt } from "react-icons/fa"
-import { ImExit } from "react-icons/im"
-import { BsFillGearFill } from "react-icons/bs"
+import { FaUserAlt } from "react-icons/fa";
+import { ImExit } from "react-icons/im";
+import { BsFillGearFill } from "react-icons/bs";
 
-import { useAuth } from "../../providers/user"
+import { useAuth } from "../../providers/user";
 
 const Header = ({ PageName }) => {
 
-    const { user, setUser } = useAuth()
-    const { avatar, name } = user
+    const { user, setUser } = useAuth();
+    const { avatar, name } = user;
 
-    const [isOpenModal, setIsOpenModal] = useState(false)
+    const [isOpenModal, setIsOpenModal] = useState(false);
 
     useEffect(() => {
 
         document.addEventListener("click", (e) => {
             if (!e.target.closest(".user__modalConfiguration")) {
-                setIsOpenModal(false)
+                setIsOpenModal(false);
             } else {
-                setIsOpenModal(true)
+                setIsOpenModal(true);
             }
         })
 
     }, [isOpenModal])
 
     const handleLoggout = () => {
-        setUser()
-        localStorage.removeItem("@Bloxs:user")
+        setUser();
+        localStorage.removeItem("@Bloxs:user");
     }
 
     return (
@@ -67,7 +67,6 @@ const Header = ({ PageName }) => {
                             e.target.src= "/src/assets/icons/user-blank.png"
                         }} />
                 </div>
-
             </div>
         </header>
     )

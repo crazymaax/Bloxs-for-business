@@ -1,30 +1,30 @@
-import { useEffect } from "react"
-import "./style.scss"
+import { useEffect } from "react";
+import "./style.scss";
 
-import Aside from "../../components/Aside"
-import Header from "../../components/Header"
-import Noticia from "../../components/Noticia"
+import Aside from "../../components/Aside";
+import Header from "../../components/Header";
+import Noticia from "../../components/Noticia";
 
-import { useAuth } from "../../providers/user"
-import { useNews } from "../../providers/noticias"
+import { useAuth } from "../../providers/user";
+import { useNews } from "../../providers/noticias";
 
-import { Link, useHistory } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom";
 
 const Home = () => {
 
-    const { user } = useAuth()
-    const history = useHistory()
-    const { listNews, news } = useNews()
+    const { user } = useAuth();
+    const history = useHistory();
+    const { listNews, news } = useNews();
 
     if (!user) {
-        history.push("/")
+        history.push("/");
     }
 
     const { name } = user;
 
     useEffect(() => {
 
-        listNews(1)
+        listNews(1);
 
     }, [])
 
@@ -34,6 +34,7 @@ const Home = () => {
             <div className="pageContent__main">
 
                 <Header PageName={"Home"} />
+
                 <main>
                     <div className="main__home">
                         <div className="home__card">
@@ -71,14 +72,15 @@ const Home = () => {
                                                     <Noticia noticia={item} />
                                                 </div>
                                             )
-
                                         })}
                                     </>
                                 )}
                             </div>
 
                             <Link to="/comunidade/noticias" className="card__button">Acessar</Link>
+
                         </div>
+
                         <div className="home__card">
                             <h2>Indicações</h2>
                             <p>Cadastre investidores para suas operações e ganhe por cada indicação.</p>

@@ -1,6 +1,6 @@
-import "./App.scss"
+import "./App.scss";
 
-import Routes from "./routes"
+import Routes from "./routes";
 
 function App() {
 
@@ -11,4 +11,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

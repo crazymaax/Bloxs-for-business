@@ -2,18 +2,18 @@ import { Route, Switch } from "react-router-dom";
 
 import Login from "../pages/Login";
 import Home from "../pages/Home";
+import Register from "../pages/Register";
 import Dashboard from "../pages/Empregador/Dashboard";
 import Empresas from "../pages/Empregador/Empresas";
 import Projetos from "../pages/Empregador/Projetos";
 import Chat from "../pages/Empregador/Chat";
 import Proventos from "../pages/Empregador/Proventos";
+import Indicacoes from "../pages/Empregador/Indicacoes";
+import Forum from "../pages/Comunidade/Forum";
 import Academy from "../pages/Comunidade/Academy";
 import Eventos from "../pages/Comunidade/Eventos";
 import Noticias from "../pages/Comunidade/Noticias"
 import Servicos from "../pages/Comunidade/Servicos";
-import Forum from "../pages/Comunidade/Forum";
-import Indicacoes from "../pages/Empregador/Indicacoes";
-import Register from "../pages/Register";
 
 const Routes = () => {
 

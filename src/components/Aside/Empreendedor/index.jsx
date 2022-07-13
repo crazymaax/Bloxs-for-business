@@ -1,13 +1,13 @@
-import Dashboard from "../../../assets/icons/dashboard.svg"
-import Empresas from "../../../assets/icons/empresas.svg"
-import Projetos from "../../../assets/icons/projetos.svg"
-import Chat from "../../../assets/icons/chat.svg"
-import Proventos from "../../../assets/icons/proventos.svg"
-import Indicacoes from "../../../assets/icons/indicacoes.svg"
+import Dashboard from "../../../assets/icons/dashboard.svg";
+import Empresas from "../../../assets/icons/empresas.svg";
+import Projetos from "../../../assets/icons/projetos.svg";
+import Chat from "../../../assets/icons/chat.svg";
+import Proventos from "../../../assets/icons/proventos.svg";
+import Indicacoes from "../../../assets/icons/indicacoes.svg";
 
-import { FaAngleRight } from "react-icons/fa"
+import { FaAngleRight } from "react-icons/fa";
 
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Empreendedor = () => {
 
@@ -34,7 +34,7 @@ const Empreendedor = () => {
                             <img src={Projetos} />
                             <div className="summary__text">
                                 <span>Projetos</span>
-                                <FaAngleRight color={"#4B4D6E"}/>
+                                <FaAngleRight color={"#4B4D6E"} />
                             </div>
                         </summary>
                         <div className="details__links">
@@ -84,9 +84,7 @@ const Empreendedor = () => {
                     </Link>
                 </li>
             </ul>
-
         </div>
-
     )
 }
 

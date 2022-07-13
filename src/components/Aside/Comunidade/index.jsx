@@ -1,10 +1,10 @@
-import Forum from "../../../assets/icons/forum.svg"
-import Academy from "../../../assets/icons/academy.svg"
-import Eventos from "../../../assets/icons/eventos.svg"
-import Noticias from "../../../assets/icons/noticias.svg"
-import Servicos from "../../../assets/icons/servicos.svg"
+import Forum from "../../../assets/icons/forum.svg";
+import Academy from "../../../assets/icons/academy.svg";
+import Eventos from "../../../assets/icons/eventos.svg";
+import Noticias from "../../../assets/icons/noticias.svg";
+import Servicos from "../../../assets/icons/servicos.svg";
 
-import { FaAngleRight } from "react-icons/fa"
+import { FaAngleRight } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 
@@ -77,7 +77,6 @@ const Comunidade = () => {
                     </Link>
                 </li>
             </ul>
-
         </div>
     )
 }

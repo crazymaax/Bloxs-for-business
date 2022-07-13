@@ -30,9 +30,6 @@
 }
 
 .list_arrowLeft, .list_arrowRight {
-    position: absolute;
-    z-index: 2;
-    
     width: 40px;
     height: 100%;
     
@@ -41,11 +38,14 @@
     
     display: flex;
     align-items: center;
-    justify-content: center;
     overflow: hidden;
-    cursor: pointer;
+    
+    justify-content: center;
+    position: absolute;
+    z-index: 2;
     
     transition: opacity 0.5s;
+    cursor: pointer;
     
     svg {
         position: absolute;
@@ -56,7 +56,6 @@
     &:hover > svg {
         width: 10px;
         fill: white;
-
     }
 
     @media screen and (min-width: 768px) {

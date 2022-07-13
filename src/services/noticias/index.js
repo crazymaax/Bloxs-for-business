@@ -1,8 +1,8 @@
 import { instance } from "../index";
 
 export const listNewsApi = async (page) => {
-    
-    const data = {}
+
+    const data = {};
 
     const responseEnergy = await instance
         .get(`&categories=74&page=${page}&per_page=3`)
@@ -12,12 +12,13 @@ export const listNewsApi = async (page) => {
                 maxPage: response.headers['x-wp-totalpages'],
                 currentPage: page
             }
-            data.energy = energyData
+            data.energy = energyData;
         })
         .catch((error) => {
-            return false
+            return false;
         })
-        const responseAgro = await instance
+
+    const responseAgro = await instance
         .get(`&categories=76&page=${page}&per_page=3`)
         .then((response) => {
 
@@ -26,10 +27,10 @@ export const listNewsApi = async (page) => {
                 maxPage: response.headers['x-wp-totalpages'],
                 currentPage: page
             }
-            data.agro = agroData
+            data.agro = agroData;
         })
         .catch((error) => {
-            return false
+            return false;
         })
 
     return data;

@@ -53,13 +53,12 @@
 
 .boxesContainer__smallBox {
     display: flex;
-    width: calc(50% - 10px); // 50% do espaÃ§o do pai -10px do gap.
+    width: calc(50% - 10px); // 50% do espaço do pai -10px do gap.
 
     svg {
         font-size: 80px;
         margin-right: 10px;
     }
-
 }
 
 .loginContainer__form {
@@ -92,12 +91,10 @@
 
     button {
         height: 50px;
-
         background-color: utilities.$login-text-color-2;
         color: utilities.$login-text-color;
         border-radius: .25rem;
         border: transparent;
-
         cursor: pointer;
     }
 
